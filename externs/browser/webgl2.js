@@ -29,7 +29,7 @@
 
 /**
  * @constructor
- * @extends {WebGLRenderingContext}
+ * @extends {BaseWebGLContext}
  */
 function WebGL2RenderingContext() {}
 
