@@ -36,1823 +36,1829 @@
 var TexImageSource;
 
 /**
+ * @record
+ */
+function BaseWebGLRenderingContext() {}
+
+/**
  * @constructor
+ * @extends {BaseWebGLRenderingContext}
  */
 function WebGLRenderingContext() {}
 
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_BUFFER_BIT;
+BaseWebGLRenderingContext.DEPTH_BUFFER_BIT;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_BUFFER_BIT;
+BaseWebGLRenderingContext.STENCIL_BUFFER_BIT;
 
 /** @const {number} */
-WebGLRenderingContext.COLOR_BUFFER_BIT;
+BaseWebGLRenderingContext.COLOR_BUFFER_BIT;
 
 /** @const {number} */
-WebGLRenderingContext.POINTS;
+BaseWebGLRenderingContext.POINTS;
 
 /** @const {number} */
-WebGLRenderingContext.LINES;
+BaseWebGLRenderingContext.LINES;
 
 /** @const {number} */
-WebGLRenderingContext.LINE_LOOP;
+BaseWebGLRenderingContext.LINE_LOOP;
 
 /** @const {number} */
-WebGLRenderingContext.LINE_STRIP;
+BaseWebGLRenderingContext.LINE_STRIP;
 
 /** @const {number} */
-WebGLRenderingContext.TRIANGLES;
+BaseWebGLRenderingContext.TRIANGLES;
 
 /** @const {number} */
-WebGLRenderingContext.TRIANGLE_STRIP;
+BaseWebGLRenderingContext.TRIANGLE_STRIP;
 
 /** @const {number} */
-WebGLRenderingContext.TRIANGLE_FAN;
+BaseWebGLRenderingContext.TRIANGLE_FAN;
 
 /** @const {number} */
-WebGLRenderingContext.ZERO;
+BaseWebGLRenderingContext.ZERO;
 
 /** @const {number} */
-WebGLRenderingContext.ONE;
+BaseWebGLRenderingContext.ONE;
 
 /** @const {number} */
-WebGLRenderingContext.SRC_COLOR;
+BaseWebGLRenderingContext.SRC_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.ONE_MINUS_SRC_COLOR;
+BaseWebGLRenderingContext.ONE_MINUS_SRC_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.SRC_ALPHA;
+BaseWebGLRenderingContext.SRC_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.ONE_MINUS_SRC_ALPHA;
+BaseWebGLRenderingContext.ONE_MINUS_SRC_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.DST_ALPHA;
+BaseWebGLRenderingContext.DST_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.ONE_MINUS_DST_ALPHA;
+BaseWebGLRenderingContext.ONE_MINUS_DST_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.DST_COLOR;
+BaseWebGLRenderingContext.DST_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.ONE_MINUS_DST_COLOR;
+BaseWebGLRenderingContext.ONE_MINUS_DST_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.SRC_ALPHA_SATURATE;
+BaseWebGLRenderingContext.SRC_ALPHA_SATURATE;
 
 /** @const {number} */
-WebGLRenderingContext.FUNC_ADD;
+BaseWebGLRenderingContext.FUNC_ADD;
 
 /** @const {number} */
-WebGLRenderingContext.BLEND_EQUATION;
+BaseWebGLRenderingContext.BLEND_EQUATION;
 
 /** @const {number} */
-WebGLRenderingContext.BLEND_EQUATION_RGB;
+BaseWebGLRenderingContext.BLEND_EQUATION_RGB;
 
 /** @const {number} */
-WebGLRenderingContext.BLEND_EQUATION_ALPHA;
+BaseWebGLRenderingContext.BLEND_EQUATION_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.FUNC_SUBTRACT;
+BaseWebGLRenderingContext.FUNC_SUBTRACT;
 
 /** @const {number} */
-WebGLRenderingContext.FUNC_REVERSE_SUBTRACT;
+BaseWebGLRenderingContext.FUNC_REVERSE_SUBTRACT;
 
 /** @const {number} */
-WebGLRenderingContext.BLEND_DST_RGB;
+BaseWebGLRenderingContext.BLEND_DST_RGB;
 
 /** @const {number} */
-WebGLRenderingContext.BLEND_SRC_RGB;
+BaseWebGLRenderingContext.BLEND_SRC_RGB;
 
 /** @const {number} */
-WebGLRenderingContext.BLEND_DST_ALPHA;
+BaseWebGLRenderingContext.BLEND_DST_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.BLEND_SRC_ALPHA;
+BaseWebGLRenderingContext.BLEND_SRC_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.CONSTANT_COLOR;
+BaseWebGLRenderingContext.CONSTANT_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.ONE_MINUS_CONSTANT_COLOR;
+BaseWebGLRenderingContext.ONE_MINUS_CONSTANT_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.CONSTANT_ALPHA;
+BaseWebGLRenderingContext.CONSTANT_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.ONE_MINUS_CONSTANT_ALPHA;
+BaseWebGLRenderingContext.ONE_MINUS_CONSTANT_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.BLEND_COLOR;
+BaseWebGLRenderingContext.BLEND_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.ARRAY_BUFFER;
+BaseWebGLRenderingContext.ARRAY_BUFFER;
 
 /** @const {number} */
-WebGLRenderingContext.ELEMENT_ARRAY_BUFFER;
+BaseWebGLRenderingContext.ELEMENT_ARRAY_BUFFER;
 
 /** @const {number} */
-WebGLRenderingContext.ARRAY_BUFFER_BINDING;
+BaseWebGLRenderingContext.ARRAY_BUFFER_BINDING;
 
 /** @const {number} */
-WebGLRenderingContext.ELEMENT_ARRAY_BUFFER_BINDING;
+BaseWebGLRenderingContext.ELEMENT_ARRAY_BUFFER_BINDING;
 
 /** @const {number} */
-WebGLRenderingContext.STREAM_DRAW;
+BaseWebGLRenderingContext.STREAM_DRAW;
 
 /** @const {number} */
-WebGLRenderingContext.STATIC_DRAW;
+BaseWebGLRenderingContext.STATIC_DRAW;
 
 /** @const {number} */
-WebGLRenderingContext.DYNAMIC_DRAW;
+BaseWebGLRenderingContext.DYNAMIC_DRAW;
 
 /** @const {number} */
-WebGLRenderingContext.BUFFER_SIZE;
+BaseWebGLRenderingContext.BUFFER_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.BUFFER_USAGE;
+BaseWebGLRenderingContext.BUFFER_USAGE;
 
 /** @const {number} */
-WebGLRenderingContext.CURRENT_VERTEX_ATTRIB;
+BaseWebGLRenderingContext.CURRENT_VERTEX_ATTRIB;
 
 /** @const {number} */
-WebGLRenderingContext.FRONT;
+BaseWebGLRenderingContext.FRONT;
 
 /** @const {number} */
-WebGLRenderingContext.BACK;
+BaseWebGLRenderingContext.BACK;
 
 /** @const {number} */
-WebGLRenderingContext.FRONT_AND_BACK;
+BaseWebGLRenderingContext.FRONT_AND_BACK;
 
 /** @const {number} */
-WebGLRenderingContext.CULL_FACE;
+BaseWebGLRenderingContext.CULL_FACE;
 
 /** @const {number} */
-WebGLRenderingContext.BLEND;
+BaseWebGLRenderingContext.BLEND;
 
 /** @const {number} */
-WebGLRenderingContext.DITHER;
+BaseWebGLRenderingContext.DITHER;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_TEST;
+BaseWebGLRenderingContext.STENCIL_TEST;
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_TEST;
+BaseWebGLRenderingContext.DEPTH_TEST;
 
 /** @const {number} */
-WebGLRenderingContext.SCISSOR_TEST;
+BaseWebGLRenderingContext.SCISSOR_TEST;
 
 /** @const {number} */
-WebGLRenderingContext.POLYGON_OFFSET_FILL;
+BaseWebGLRenderingContext.POLYGON_OFFSET_FILL;
 
 /** @const {number} */
-WebGLRenderingContext.SAMPLE_ALPHA_TO_COVERAGE;
+BaseWebGLRenderingContext.SAMPLE_ALPHA_TO_COVERAGE;
 
 /** @const {number} */
-WebGLRenderingContext.SAMPLE_COVERAGE;
+BaseWebGLRenderingContext.SAMPLE_COVERAGE;
 
 /** @const {number} */
-WebGLRenderingContext.NO_ERROR;
+BaseWebGLRenderingContext.NO_ERROR;
 
 /** @const {number} */
-WebGLRenderingContext.INVALID_ENUM;
+BaseWebGLRenderingContext.INVALID_ENUM;
 
 /** @const {number} */
-WebGLRenderingContext.INVALID_VALUE;
+BaseWebGLRenderingContext.INVALID_VALUE;
 
 /** @const {number} */
-WebGLRenderingContext.INVALID_OPERATION;
+BaseWebGLRenderingContext.INVALID_OPERATION;
 
 /** @const {number} */
-WebGLRenderingContext.OUT_OF_MEMORY;
+BaseWebGLRenderingContext.OUT_OF_MEMORY;
 
 /** @const {number} */
-WebGLRenderingContext.CW;
+BaseWebGLRenderingContext.CW;
 
 /** @const {number} */
-WebGLRenderingContext.CCW;
+BaseWebGLRenderingContext.CCW;
 
 /** @const {number} */
-WebGLRenderingContext.LINE_WIDTH;
+BaseWebGLRenderingContext.LINE_WIDTH;
 
 /** @const {number} */
-WebGLRenderingContext.ALIASED_POINT_SIZE_RANGE;
+BaseWebGLRenderingContext.ALIASED_POINT_SIZE_RANGE;
 
 /** @const {number} */
-WebGLRenderingContext.ALIASED_LINE_WIDTH_RANGE;
+BaseWebGLRenderingContext.ALIASED_LINE_WIDTH_RANGE;
 
 /** @const {number} */
-WebGLRenderingContext.CULL_FACE_MODE;
+BaseWebGLRenderingContext.CULL_FACE_MODE;
 
 /** @const {number} */
-WebGLRenderingContext.FRONT_FACE;
+BaseWebGLRenderingContext.FRONT_FACE;
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_RANGE;
+BaseWebGLRenderingContext.DEPTH_RANGE;
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_WRITEMASK;
+BaseWebGLRenderingContext.DEPTH_WRITEMASK;
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_CLEAR_VALUE;
+BaseWebGLRenderingContext.DEPTH_CLEAR_VALUE;
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_FUNC;
+BaseWebGLRenderingContext.DEPTH_FUNC;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_CLEAR_VALUE;
+BaseWebGLRenderingContext.STENCIL_CLEAR_VALUE;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_FUNC;
+BaseWebGLRenderingContext.STENCIL_FUNC;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_FAIL;
+BaseWebGLRenderingContext.STENCIL_FAIL;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_PASS_DEPTH_FAIL;
+BaseWebGLRenderingContext.STENCIL_PASS_DEPTH_FAIL;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_PASS_DEPTH_PASS;
+BaseWebGLRenderingContext.STENCIL_PASS_DEPTH_PASS;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_REF;
+BaseWebGLRenderingContext.STENCIL_REF;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_VALUE_MASK;
+BaseWebGLRenderingContext.STENCIL_VALUE_MASK;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_WRITEMASK;
+BaseWebGLRenderingContext.STENCIL_WRITEMASK;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_BACK_FUNC;
+BaseWebGLRenderingContext.STENCIL_BACK_FUNC;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_BACK_FAIL;
+BaseWebGLRenderingContext.STENCIL_BACK_FAIL;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_BACK_PASS_DEPTH_FAIL;
+BaseWebGLRenderingContext.STENCIL_BACK_PASS_DEPTH_FAIL;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_BACK_PASS_DEPTH_PASS;
+BaseWebGLRenderingContext.STENCIL_BACK_PASS_DEPTH_PASS;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_BACK_REF;
+BaseWebGLRenderingContext.STENCIL_BACK_REF;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_BACK_VALUE_MASK;
+BaseWebGLRenderingContext.STENCIL_BACK_VALUE_MASK;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_BACK_WRITEMASK;
+BaseWebGLRenderingContext.STENCIL_BACK_WRITEMASK;
 
 /** @const {number} */
-WebGLRenderingContext.VIEWPORT;
+BaseWebGLRenderingContext.VIEWPORT;
 
 /** @const {number} */
-WebGLRenderingContext.SCISSOR_BOX;
+BaseWebGLRenderingContext.SCISSOR_BOX;
 
 /** @const {number} */
-WebGLRenderingContext.COLOR_CLEAR_VALUE;
+BaseWebGLRenderingContext.COLOR_CLEAR_VALUE;
 
 /** @const {number} */
-WebGLRenderingContext.COLOR_WRITEMASK;
+BaseWebGLRenderingContext.COLOR_WRITEMASK;
 
 /** @const {number} */
-WebGLRenderingContext.UNPACK_ALIGNMENT;
+BaseWebGLRenderingContext.UNPACK_ALIGNMENT;
 
 /** @const {number} */
-WebGLRenderingContext.PACK_ALIGNMENT;
+BaseWebGLRenderingContext.PACK_ALIGNMENT;
 
 /** @const {number} */
-WebGLRenderingContext.MAX_TEXTURE_SIZE;
+BaseWebGLRenderingContext.MAX_TEXTURE_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.MAX_VIEWPORT_DIMS;
+BaseWebGLRenderingContext.MAX_VIEWPORT_DIMS;
 
 /** @const {number} */
-WebGLRenderingContext.SUBPIXEL_BITS;
+BaseWebGLRenderingContext.SUBPIXEL_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.RED_BITS;
+BaseWebGLRenderingContext.RED_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.GREEN_BITS;
+BaseWebGLRenderingContext.GREEN_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.BLUE_BITS;
+BaseWebGLRenderingContext.BLUE_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.ALPHA_BITS;
+BaseWebGLRenderingContext.ALPHA_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_BITS;
+BaseWebGLRenderingContext.DEPTH_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_BITS;
+BaseWebGLRenderingContext.STENCIL_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.POLYGON_OFFSET_UNITS;
+BaseWebGLRenderingContext.POLYGON_OFFSET_UNITS;
 
 /** @const {number} */
-WebGLRenderingContext.POLYGON_OFFSET_FACTOR;
+BaseWebGLRenderingContext.POLYGON_OFFSET_FACTOR;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_BINDING_2D;
+BaseWebGLRenderingContext.TEXTURE_BINDING_2D;
 
 /** @const {number} */
-WebGLRenderingContext.SAMPLE_BUFFERS;
+BaseWebGLRenderingContext.SAMPLE_BUFFERS;
 
 /** @const {number} */
-WebGLRenderingContext.SAMPLES;
+BaseWebGLRenderingContext.SAMPLES;
 
 /** @const {number} */
-WebGLRenderingContext.SAMPLE_COVERAGE_VALUE;
+BaseWebGLRenderingContext.SAMPLE_COVERAGE_VALUE;
 
 /** @const {number} */
-WebGLRenderingContext.SAMPLE_COVERAGE_INVERT;
+BaseWebGLRenderingContext.SAMPLE_COVERAGE_INVERT;
 
 /** @const {number} */
-WebGLRenderingContext.COMPRESSED_TEXTURE_FORMATS;
+BaseWebGLRenderingContext.COMPRESSED_TEXTURE_FORMATS;
 
 /** @const {number} */
-WebGLRenderingContext.DONT_CARE;
+BaseWebGLRenderingContext.DONT_CARE;
 
 /** @const {number} */
-WebGLRenderingContext.FASTEST;
+BaseWebGLRenderingContext.FASTEST;
 
 /** @const {number} */
-WebGLRenderingContext.NICEST;
+BaseWebGLRenderingContext.NICEST;
 
 /** @const {number} */
-WebGLRenderingContext.GENERATE_MIPMAP_HINT;
+BaseWebGLRenderingContext.GENERATE_MIPMAP_HINT;
 
 /** @const {number} */
-WebGLRenderingContext.BYTE;
+BaseWebGLRenderingContext.BYTE;
 
 /** @const {number} */
-WebGLRenderingContext.UNSIGNED_BYTE;
+BaseWebGLRenderingContext.UNSIGNED_BYTE;
 
 /** @const {number} */
-WebGLRenderingContext.SHORT;
+BaseWebGLRenderingContext.SHORT;
 
 /** @const {number} */
-WebGLRenderingContext.UNSIGNED_SHORT;
+BaseWebGLRenderingContext.UNSIGNED_SHORT;
 
 /** @const {number} */
-WebGLRenderingContext.INT;
+BaseWebGLRenderingContext.INT;
 
 /** @const {number} */
-WebGLRenderingContext.UNSIGNED_INT;
+BaseWebGLRenderingContext.UNSIGNED_INT;
 
 /** @const {number} */
-WebGLRenderingContext.FLOAT;
+BaseWebGLRenderingContext.FLOAT;
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_COMPONENT;
+BaseWebGLRenderingContext.DEPTH_COMPONENT;
 
 /** @const {number} */
-WebGLRenderingContext.ALPHA;
+BaseWebGLRenderingContext.ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.RGB;
+BaseWebGLRenderingContext.RGB;
 
 /** @const {number} */
-WebGLRenderingContext.RGBA;
+BaseWebGLRenderingContext.RGBA;
 
 /** @const {number} */
-WebGLRenderingContext.LUMINANCE;
+BaseWebGLRenderingContext.LUMINANCE;
 
 /** @const {number} */
-WebGLRenderingContext.LUMINANCE_ALPHA;
+BaseWebGLRenderingContext.LUMINANCE_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.UNSIGNED_SHORT_4_4_4_4;
+BaseWebGLRenderingContext.UNSIGNED_SHORT_4_4_4_4;
 
 /** @const {number} */
-WebGLRenderingContext.UNSIGNED_SHORT_5_5_5_1;
+BaseWebGLRenderingContext.UNSIGNED_SHORT_5_5_5_1;
 
 /** @const {number} */
-WebGLRenderingContext.UNSIGNED_SHORT_5_6_5;
+BaseWebGLRenderingContext.UNSIGNED_SHORT_5_6_5;
 
 /** @const {number} */
-WebGLRenderingContext.FRAGMENT_SHADER;
+BaseWebGLRenderingContext.FRAGMENT_SHADER;
 
 /** @const {number} */
-WebGLRenderingContext.VERTEX_SHADER;
+BaseWebGLRenderingContext.VERTEX_SHADER;
 
 /** @const {number} */
-WebGLRenderingContext.MAX_VERTEX_ATTRIBS;
+BaseWebGLRenderingContext.MAX_VERTEX_ATTRIBS;
 
 /** @const {number} */
-WebGLRenderingContext.MAX_VERTEX_UNIFORM_VECTORS;
+BaseWebGLRenderingContext.MAX_VERTEX_UNIFORM_VECTORS;
 
 /** @const {number} */
-WebGLRenderingContext.MAX_VARYING_VECTORS;
+BaseWebGLRenderingContext.MAX_VARYING_VECTORS;
 
 /** @const {number} */
-WebGLRenderingContext.MAX_COMBINED_TEXTURE_IMAGE_UNITS;
+BaseWebGLRenderingContext.MAX_COMBINED_TEXTURE_IMAGE_UNITS;
 
 /** @const {number} */
-WebGLRenderingContext.MAX_VERTEX_TEXTURE_IMAGE_UNITS;
+BaseWebGLRenderingContext.MAX_VERTEX_TEXTURE_IMAGE_UNITS;
 
 /** @const {number} */
-WebGLRenderingContext.MAX_TEXTURE_IMAGE_UNITS;
+BaseWebGLRenderingContext.MAX_TEXTURE_IMAGE_UNITS;
 
 /** @const {number} */
-WebGLRenderingContext.MAX_FRAGMENT_UNIFORM_VECTORS;
+BaseWebGLRenderingContext.MAX_FRAGMENT_UNIFORM_VECTORS;
 
 /** @const {number} */
-WebGLRenderingContext.SHADER_TYPE;
+BaseWebGLRenderingContext.SHADER_TYPE;
 
 /** @const {number} */
-WebGLRenderingContext.DELETE_STATUS;
+BaseWebGLRenderingContext.DELETE_STATUS;
 
 /** @const {number} */
-WebGLRenderingContext.LINK_STATUS;
+BaseWebGLRenderingContext.LINK_STATUS;
 
 /** @const {number} */
-WebGLRenderingContext.VALIDATE_STATUS;
+BaseWebGLRenderingContext.VALIDATE_STATUS;
 
 /** @const {number} */
-WebGLRenderingContext.ATTACHED_SHADERS;
+BaseWebGLRenderingContext.ATTACHED_SHADERS;
 
 /** @const {number} */
-WebGLRenderingContext.ACTIVE_UNIFORMS;
+BaseWebGLRenderingContext.ACTIVE_UNIFORMS;
 
 /** @const {number} */
-WebGLRenderingContext.ACTIVE_ATTRIBUTES;
+BaseWebGLRenderingContext.ACTIVE_ATTRIBUTES;
 
 /** @const {number} */
-WebGLRenderingContext.SHADING_LANGUAGE_VERSION;
+BaseWebGLRenderingContext.SHADING_LANGUAGE_VERSION;
 
 /** @const {number} */
-WebGLRenderingContext.CURRENT_PROGRAM;
+BaseWebGLRenderingContext.CURRENT_PROGRAM;
 
 /** @const {number} */
-WebGLRenderingContext.NEVER;
+BaseWebGLRenderingContext.NEVER;
 
 /** @const {number} */
-WebGLRenderingContext.LESS;
+BaseWebGLRenderingContext.LESS;
 
 /** @const {number} */
-WebGLRenderingContext.EQUAL;
+BaseWebGLRenderingContext.EQUAL;
 
 /** @const {number} */
-WebGLRenderingContext.LEQUAL;
+BaseWebGLRenderingContext.LEQUAL;
 
 /** @const {number} */
-WebGLRenderingContext.GREATER;
+BaseWebGLRenderingContext.GREATER;
 
 /** @const {number} */
-WebGLRenderingContext.NOTEQUAL;
+BaseWebGLRenderingContext.NOTEQUAL;
 
 /** @const {number} */
-WebGLRenderingContext.GEQUAL;
+BaseWebGLRenderingContext.GEQUAL;
 
 /** @const {number} */
-WebGLRenderingContext.ALWAYS;
+BaseWebGLRenderingContext.ALWAYS;
 
 /** @const {number} */
-WebGLRenderingContext.KEEP;
+BaseWebGLRenderingContext.KEEP;
 
 /** @const {number} */
-WebGLRenderingContext.REPLACE;
+BaseWebGLRenderingContext.REPLACE;
 
 /** @const {number} */
-WebGLRenderingContext.INCR;
+BaseWebGLRenderingContext.INCR;
 
 /** @const {number} */
-WebGLRenderingContext.DECR;
+BaseWebGLRenderingContext.DECR;
 
 /** @const {number} */
-WebGLRenderingContext.INVERT;
+BaseWebGLRenderingContext.INVERT;
 
 /** @const {number} */
-WebGLRenderingContext.INCR_WRAP;
+BaseWebGLRenderingContext.INCR_WRAP;
 
 /** @const {number} */
-WebGLRenderingContext.DECR_WRAP;
+BaseWebGLRenderingContext.DECR_WRAP;
 
 /** @const {number} */
-WebGLRenderingContext.VENDOR;
+BaseWebGLRenderingContext.VENDOR;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERER;
+BaseWebGLRenderingContext.RENDERER;
 
 /** @const {number} */
-WebGLRenderingContext.VERSION;
+BaseWebGLRenderingContext.VERSION;
 
 /** @const {number} */
-WebGLRenderingContext.NEAREST;
+BaseWebGLRenderingContext.NEAREST;
 
 /** @const {number} */
-WebGLRenderingContext.LINEAR;
+BaseWebGLRenderingContext.LINEAR;
 
 /** @const {number} */
-WebGLRenderingContext.NEAREST_MIPMAP_NEAREST;
+BaseWebGLRenderingContext.NEAREST_MIPMAP_NEAREST;
 
 /** @const {number} */
-WebGLRenderingContext.LINEAR_MIPMAP_NEAREST;
+BaseWebGLRenderingContext.LINEAR_MIPMAP_NEAREST;
 
 /** @const {number} */
-WebGLRenderingContext.NEAREST_MIPMAP_LINEAR;
+BaseWebGLRenderingContext.NEAREST_MIPMAP_LINEAR;
 
 /** @const {number} */
-WebGLRenderingContext.LINEAR_MIPMAP_LINEAR;
+BaseWebGLRenderingContext.LINEAR_MIPMAP_LINEAR;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_MAG_FILTER;
+BaseWebGLRenderingContext.TEXTURE_MAG_FILTER;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_MIN_FILTER;
+BaseWebGLRenderingContext.TEXTURE_MIN_FILTER;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_WRAP_S;
+BaseWebGLRenderingContext.TEXTURE_WRAP_S;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_WRAP_T;
+BaseWebGLRenderingContext.TEXTURE_WRAP_T;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_2D;
+BaseWebGLRenderingContext.TEXTURE_2D;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE;
+BaseWebGLRenderingContext.TEXTURE;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_CUBE_MAP;
+BaseWebGLRenderingContext.TEXTURE_CUBE_MAP;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_BINDING_CUBE_MAP;
+BaseWebGLRenderingContext.TEXTURE_BINDING_CUBE_MAP;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_CUBE_MAP_POSITIVE_X;
+BaseWebGLRenderingContext.TEXTURE_CUBE_MAP_POSITIVE_X;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_X;
+BaseWebGLRenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_X;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_CUBE_MAP_POSITIVE_Y;
+BaseWebGLRenderingContext.TEXTURE_CUBE_MAP_POSITIVE_Y;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_Y;
+BaseWebGLRenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_Y;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_CUBE_MAP_POSITIVE_Z;
+BaseWebGLRenderingContext.TEXTURE_CUBE_MAP_POSITIVE_Z;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_Z;
+BaseWebGLRenderingContext.TEXTURE_CUBE_MAP_NEGATIVE_Z;
 
 /** @const {number} */
-WebGLRenderingContext.MAX_CUBE_MAP_TEXTURE_SIZE;
+BaseWebGLRenderingContext.MAX_CUBE_MAP_TEXTURE_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE0;
+BaseWebGLRenderingContext.TEXTURE0;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE1;
+BaseWebGLRenderingContext.TEXTURE1;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE2;
+BaseWebGLRenderingContext.TEXTURE2;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE3;
+BaseWebGLRenderingContext.TEXTURE3;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE4;
+BaseWebGLRenderingContext.TEXTURE4;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE5;
+BaseWebGLRenderingContext.TEXTURE5;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE6;
+BaseWebGLRenderingContext.TEXTURE6;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE7;
+BaseWebGLRenderingContext.TEXTURE7;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE8;
+BaseWebGLRenderingContext.TEXTURE8;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE9;
+BaseWebGLRenderingContext.TEXTURE9;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE10;
+BaseWebGLRenderingContext.TEXTURE10;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE11;
+BaseWebGLRenderingContext.TEXTURE11;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE12;
+BaseWebGLRenderingContext.TEXTURE12;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE13;
+BaseWebGLRenderingContext.TEXTURE13;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE14;
+BaseWebGLRenderingContext.TEXTURE14;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE15;
+BaseWebGLRenderingContext.TEXTURE15;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE16;
+BaseWebGLRenderingContext.TEXTURE16;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE17;
+BaseWebGLRenderingContext.TEXTURE17;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE18;
+BaseWebGLRenderingContext.TEXTURE18;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE19;
+BaseWebGLRenderingContext.TEXTURE19;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE20;
+BaseWebGLRenderingContext.TEXTURE20;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE21;
+BaseWebGLRenderingContext.TEXTURE21;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE22;
+BaseWebGLRenderingContext.TEXTURE22;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE23;
+BaseWebGLRenderingContext.TEXTURE23;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE24;
+BaseWebGLRenderingContext.TEXTURE24;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE25;
+BaseWebGLRenderingContext.TEXTURE25;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE26;
+BaseWebGLRenderingContext.TEXTURE26;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE27;
+BaseWebGLRenderingContext.TEXTURE27;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE28;
+BaseWebGLRenderingContext.TEXTURE28;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE29;
+BaseWebGLRenderingContext.TEXTURE29;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE30;
+BaseWebGLRenderingContext.TEXTURE30;
 
 /** @const {number} */
-WebGLRenderingContext.TEXTURE31;
+BaseWebGLRenderingContext.TEXTURE31;
 
 /** @const {number} */
-WebGLRenderingContext.ACTIVE_TEXTURE;
+BaseWebGLRenderingContext.ACTIVE_TEXTURE;
 
 /** @const {number} */
-WebGLRenderingContext.REPEAT;
+BaseWebGLRenderingContext.REPEAT;
 
 /** @const {number} */
-WebGLRenderingContext.CLAMP_TO_EDGE;
+BaseWebGLRenderingContext.CLAMP_TO_EDGE;
 
 /** @const {number} */
-WebGLRenderingContext.MIRRORED_REPEAT;
+BaseWebGLRenderingContext.MIRRORED_REPEAT;
 
 /** @const {number} */
-WebGLRenderingContext.FLOAT_VEC2;
+BaseWebGLRenderingContext.FLOAT_VEC2;
 
 /** @const {number} */
-WebGLRenderingContext.FLOAT_VEC3;
+BaseWebGLRenderingContext.FLOAT_VEC3;
 
 /** @const {number} */
-WebGLRenderingContext.FLOAT_VEC4;
+BaseWebGLRenderingContext.FLOAT_VEC4;
 
 /** @const {number} */
-WebGLRenderingContext.INT_VEC2;
+BaseWebGLRenderingContext.INT_VEC2;
 
 /** @const {number} */
-WebGLRenderingContext.INT_VEC3;
+BaseWebGLRenderingContext.INT_VEC3;
 
 /** @const {number} */
-WebGLRenderingContext.INT_VEC4;
+BaseWebGLRenderingContext.INT_VEC4;
 
 /** @const {number} */
-WebGLRenderingContext.BOOL;
+BaseWebGLRenderingContext.BOOL;
 
 /** @const {number} */
-WebGLRenderingContext.BOOL_VEC2;
+BaseWebGLRenderingContext.BOOL_VEC2;
 
 /** @const {number} */
-WebGLRenderingContext.BOOL_VEC3;
+BaseWebGLRenderingContext.BOOL_VEC3;
 
 /** @const {number} */
-WebGLRenderingContext.BOOL_VEC4;
+BaseWebGLRenderingContext.BOOL_VEC4;
 
 /** @const {number} */
-WebGLRenderingContext.FLOAT_MAT2;
+BaseWebGLRenderingContext.FLOAT_MAT2;
 
 /** @const {number} */
-WebGLRenderingContext.FLOAT_MAT3;
+BaseWebGLRenderingContext.FLOAT_MAT3;
 
 /** @const {number} */
-WebGLRenderingContext.FLOAT_MAT4;
+BaseWebGLRenderingContext.FLOAT_MAT4;
 
 /** @const {number} */
-WebGLRenderingContext.SAMPLER_2D;
+BaseWebGLRenderingContext.SAMPLER_2D;
 
 /** @const {number} */
-WebGLRenderingContext.SAMPLER_CUBE;
+BaseWebGLRenderingContext.SAMPLER_CUBE;
 
 /** @const {number} */
-WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_ENABLED;
+BaseWebGLRenderingContext.VERTEX_ATTRIB_ARRAY_ENABLED;
 
 /** @const {number} */
-WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_SIZE;
+BaseWebGLRenderingContext.VERTEX_ATTRIB_ARRAY_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_STRIDE;
+BaseWebGLRenderingContext.VERTEX_ATTRIB_ARRAY_STRIDE;
 
 /** @const {number} */
-WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_TYPE;
+BaseWebGLRenderingContext.VERTEX_ATTRIB_ARRAY_TYPE;
 
 /** @const {number} */
-WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_NORMALIZED;
+BaseWebGLRenderingContext.VERTEX_ATTRIB_ARRAY_NORMALIZED;
 
 /** @const {number} */
-WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_POINTER;
+BaseWebGLRenderingContext.VERTEX_ATTRIB_ARRAY_POINTER;
 
 /** @const {number} */
-WebGLRenderingContext.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING;
+BaseWebGLRenderingContext.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING;
 
 /** @const {number} */
-WebGLRenderingContext.IMPLEMENTATION_COLOR_READ_FORMAT;
+BaseWebGLRenderingContext.IMPLEMENTATION_COLOR_READ_FORMAT;
 
 /** @const {number} */
-WebGLRenderingContext.IMPLEMENTATION_COLOR_READ_TYPE;
+BaseWebGLRenderingContext.IMPLEMENTATION_COLOR_READ_TYPE;
 
 /** @const {number} */
-WebGLRenderingContext.COMPILE_STATUS;
+BaseWebGLRenderingContext.COMPILE_STATUS;
 
 /** @const {number} */
-WebGLRenderingContext.LOW_FLOAT;
+BaseWebGLRenderingContext.LOW_FLOAT;
 
 /** @const {number} */
-WebGLRenderingContext.MEDIUM_FLOAT;
+BaseWebGLRenderingContext.MEDIUM_FLOAT;
 
 /** @const {number} */
-WebGLRenderingContext.HIGH_FLOAT;
+BaseWebGLRenderingContext.HIGH_FLOAT;
 
 /** @const {number} */
-WebGLRenderingContext.LOW_INT;
+BaseWebGLRenderingContext.LOW_INT;
 
 /** @const {number} */
-WebGLRenderingContext.MEDIUM_INT;
+BaseWebGLRenderingContext.MEDIUM_INT;
 
 /** @const {number} */
-WebGLRenderingContext.HIGH_INT;
+BaseWebGLRenderingContext.HIGH_INT;
 
 /** @const {number} */
-WebGLRenderingContext.FRAMEBUFFER;
+BaseWebGLRenderingContext.FRAMEBUFFER;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERBUFFER;
+BaseWebGLRenderingContext.RENDERBUFFER;
 
 /** @const {number} */
-WebGLRenderingContext.RGBA4;
+BaseWebGLRenderingContext.RGBA4;
 
 /** @const {number} */
-WebGLRenderingContext.RGB5_A1;
+BaseWebGLRenderingContext.RGB5_A1;
 
 /** @const {number} */
-WebGLRenderingContext.RGB565;
+BaseWebGLRenderingContext.RGB565;
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_COMPONENT16;
+BaseWebGLRenderingContext.DEPTH_COMPONENT16;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_INDEX8;
+BaseWebGLRenderingContext.STENCIL_INDEX8;
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_STENCIL;
+BaseWebGLRenderingContext.DEPTH_STENCIL;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERBUFFER_WIDTH;
+BaseWebGLRenderingContext.RENDERBUFFER_WIDTH;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERBUFFER_HEIGHT;
+BaseWebGLRenderingContext.RENDERBUFFER_HEIGHT;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERBUFFER_INTERNAL_FORMAT;
+BaseWebGLRenderingContext.RENDERBUFFER_INTERNAL_FORMAT;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERBUFFER_RED_SIZE;
+BaseWebGLRenderingContext.RENDERBUFFER_RED_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERBUFFER_GREEN_SIZE;
+BaseWebGLRenderingContext.RENDERBUFFER_GREEN_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERBUFFER_BLUE_SIZE;
+BaseWebGLRenderingContext.RENDERBUFFER_BLUE_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERBUFFER_ALPHA_SIZE;
+BaseWebGLRenderingContext.RENDERBUFFER_ALPHA_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERBUFFER_DEPTH_SIZE;
+BaseWebGLRenderingContext.RENDERBUFFER_DEPTH_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERBUFFER_STENCIL_SIZE;
+BaseWebGLRenderingContext.RENDERBUFFER_STENCIL_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE;
+BaseWebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE;
 
 /** @const {number} */
-WebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_OBJECT_NAME;
+BaseWebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_OBJECT_NAME;
 
 /** @const {number} */
-WebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL;
+BaseWebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL;
 
 /** @const {number} */
-WebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE;
+BaseWebGLRenderingContext.FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE;
 
 /** @const {number} */
-WebGLRenderingContext.COLOR_ATTACHMENT0;
+BaseWebGLRenderingContext.COLOR_ATTACHMENT0;
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_ATTACHMENT;
+BaseWebGLRenderingContext.DEPTH_ATTACHMENT;
 
 /** @const {number} */
-WebGLRenderingContext.STENCIL_ATTACHMENT;
+BaseWebGLRenderingContext.STENCIL_ATTACHMENT;
 
 /** @const {number} */
-WebGLRenderingContext.DEPTH_STENCIL_ATTACHMENT;
+BaseWebGLRenderingContext.DEPTH_STENCIL_ATTACHMENT;
 
 /** @const {number} */
-WebGLRenderingContext.NONE;
+BaseWebGLRenderingContext.NONE;
 
 /** @const {number} */
-WebGLRenderingContext.FRAMEBUFFER_COMPLETE;
+BaseWebGLRenderingContext.FRAMEBUFFER_COMPLETE;
 
 /** @const {number} */
-WebGLRenderingContext.FRAMEBUFFER_INCOMPLETE_ATTACHMENT;
+BaseWebGLRenderingContext.FRAMEBUFFER_INCOMPLETE_ATTACHMENT;
 
 /** @const {number} */
-WebGLRenderingContext.FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT;
+BaseWebGLRenderingContext.FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT;
 
 /** @const {number} */
-WebGLRenderingContext.FRAMEBUFFER_INCOMPLETE_DIMENSIONS;
+BaseWebGLRenderingContext.FRAMEBUFFER_INCOMPLETE_DIMENSIONS;
 
 /** @const {number} */
-WebGLRenderingContext.FRAMEBUFFER_UNSUPPORTED;
+BaseWebGLRenderingContext.FRAMEBUFFER_UNSUPPORTED;
 
 /** @const {number} */
-WebGLRenderingContext.FRAMEBUFFER_BINDING;
+BaseWebGLRenderingContext.FRAMEBUFFER_BINDING;
 
 /** @const {number} */
-WebGLRenderingContext.RENDERBUFFER_BINDING;
+BaseWebGLRenderingContext.RENDERBUFFER_BINDING;
 
 /** @const {number} */
-WebGLRenderingContext.MAX_RENDERBUFFER_SIZE;
+BaseWebGLRenderingContext.MAX_RENDERBUFFER_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.INVALID_FRAMEBUFFER_OPERATION;
+BaseWebGLRenderingContext.INVALID_FRAMEBUFFER_OPERATION;
 
 /** @const {number} */
-WebGLRenderingContext.UNPACK_FLIP_Y_WEBGL;
+BaseWebGLRenderingContext.UNPACK_FLIP_Y_WEBGL;
 
 /** @const {number} */
-WebGLRenderingContext.UNPACK_PREMULTIPLY_ALPHA_WEBGL;
+BaseWebGLRenderingContext.UNPACK_PREMULTIPLY_ALPHA_WEBGL;
 
 /** @const {number} */
-WebGLRenderingContext.CONTEXT_LOST_WEBGL;
+BaseWebGLRenderingContext.CONTEXT_LOST_WEBGL;
 
 /** @const {number} */
-WebGLRenderingContext.UNPACK_COLORSPACE_CONVERSION_WEBGL;
+BaseWebGLRenderingContext.UNPACK_COLORSPACE_CONVERSION_WEBGL;
 
 /** @const {number} */
-WebGLRenderingContext.BROWSER_DEFAULT_WEBGL;
+BaseWebGLRenderingContext.BROWSER_DEFAULT_WEBGL;
 
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_BUFFER_BIT;
+BaseWebGLRenderingContext.prototype.DEPTH_BUFFER_BIT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_BUFFER_BIT;
+BaseWebGLRenderingContext.prototype.STENCIL_BUFFER_BIT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.COLOR_BUFFER_BIT;
+BaseWebGLRenderingContext.prototype.COLOR_BUFFER_BIT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.POINTS;
+BaseWebGLRenderingContext.prototype.POINTS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LINES;
+BaseWebGLRenderingContext.prototype.LINES;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LINE_LOOP;
+BaseWebGLRenderingContext.prototype.LINE_LOOP;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LINE_STRIP;
+BaseWebGLRenderingContext.prototype.LINE_STRIP;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TRIANGLES;
+BaseWebGLRenderingContext.prototype.TRIANGLES;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TRIANGLE_STRIP;
+BaseWebGLRenderingContext.prototype.TRIANGLE_STRIP;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TRIANGLE_FAN;
+BaseWebGLRenderingContext.prototype.TRIANGLE_FAN;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ZERO;
+BaseWebGLRenderingContext.prototype.ZERO;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ONE;
+BaseWebGLRenderingContext.prototype.ONE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SRC_COLOR;
+BaseWebGLRenderingContext.prototype.SRC_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ONE_MINUS_SRC_COLOR;
+BaseWebGLRenderingContext.prototype.ONE_MINUS_SRC_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SRC_ALPHA;
+BaseWebGLRenderingContext.prototype.SRC_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ONE_MINUS_SRC_ALPHA;
+BaseWebGLRenderingContext.prototype.ONE_MINUS_SRC_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DST_ALPHA;
+BaseWebGLRenderingContext.prototype.DST_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ONE_MINUS_DST_ALPHA;
+BaseWebGLRenderingContext.prototype.ONE_MINUS_DST_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DST_COLOR;
+BaseWebGLRenderingContext.prototype.DST_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ONE_MINUS_DST_COLOR;
+BaseWebGLRenderingContext.prototype.ONE_MINUS_DST_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SRC_ALPHA_SATURATE;
+BaseWebGLRenderingContext.prototype.SRC_ALPHA_SATURATE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FUNC_ADD;
+BaseWebGLRenderingContext.prototype.FUNC_ADD;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BLEND_EQUATION;
+BaseWebGLRenderingContext.prototype.BLEND_EQUATION;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BLEND_EQUATION_RGB;
+BaseWebGLRenderingContext.prototype.BLEND_EQUATION_RGB;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BLEND_EQUATION_ALPHA;
+BaseWebGLRenderingContext.prototype.BLEND_EQUATION_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FUNC_SUBTRACT;
+BaseWebGLRenderingContext.prototype.FUNC_SUBTRACT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FUNC_REVERSE_SUBTRACT;
+BaseWebGLRenderingContext.prototype.FUNC_REVERSE_SUBTRACT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BLEND_DST_RGB;
+BaseWebGLRenderingContext.prototype.BLEND_DST_RGB;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BLEND_SRC_RGB;
+BaseWebGLRenderingContext.prototype.BLEND_SRC_RGB;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BLEND_DST_ALPHA;
+BaseWebGLRenderingContext.prototype.BLEND_DST_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BLEND_SRC_ALPHA;
+BaseWebGLRenderingContext.prototype.BLEND_SRC_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.CONSTANT_COLOR;
+BaseWebGLRenderingContext.prototype.CONSTANT_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ONE_MINUS_CONSTANT_COLOR;
+BaseWebGLRenderingContext.prototype.ONE_MINUS_CONSTANT_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.CONSTANT_ALPHA;
+BaseWebGLRenderingContext.prototype.CONSTANT_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ONE_MINUS_CONSTANT_ALPHA;
+BaseWebGLRenderingContext.prototype.ONE_MINUS_CONSTANT_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BLEND_COLOR;
+BaseWebGLRenderingContext.prototype.BLEND_COLOR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ARRAY_BUFFER;
+BaseWebGLRenderingContext.prototype.ARRAY_BUFFER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ELEMENT_ARRAY_BUFFER;
+BaseWebGLRenderingContext.prototype.ELEMENT_ARRAY_BUFFER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ARRAY_BUFFER_BINDING;
+BaseWebGLRenderingContext.prototype.ARRAY_BUFFER_BINDING;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ELEMENT_ARRAY_BUFFER_BINDING;
+BaseWebGLRenderingContext.prototype.ELEMENT_ARRAY_BUFFER_BINDING;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STREAM_DRAW;
+BaseWebGLRenderingContext.prototype.STREAM_DRAW;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STATIC_DRAW;
+BaseWebGLRenderingContext.prototype.STATIC_DRAW;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DYNAMIC_DRAW;
+BaseWebGLRenderingContext.prototype.DYNAMIC_DRAW;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BUFFER_SIZE;
+BaseWebGLRenderingContext.prototype.BUFFER_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BUFFER_USAGE;
+BaseWebGLRenderingContext.prototype.BUFFER_USAGE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.CURRENT_VERTEX_ATTRIB;
+BaseWebGLRenderingContext.prototype.CURRENT_VERTEX_ATTRIB;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRONT;
+BaseWebGLRenderingContext.prototype.FRONT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BACK;
+BaseWebGLRenderingContext.prototype.BACK;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRONT_AND_BACK;
+BaseWebGLRenderingContext.prototype.FRONT_AND_BACK;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.CULL_FACE;
+BaseWebGLRenderingContext.prototype.CULL_FACE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BLEND;
+BaseWebGLRenderingContext.prototype.BLEND;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DITHER;
+BaseWebGLRenderingContext.prototype.DITHER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_TEST;
+BaseWebGLRenderingContext.prototype.STENCIL_TEST;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_TEST;
+BaseWebGLRenderingContext.prototype.DEPTH_TEST;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SCISSOR_TEST;
+BaseWebGLRenderingContext.prototype.SCISSOR_TEST;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.POLYGON_OFFSET_FILL;
+BaseWebGLRenderingContext.prototype.POLYGON_OFFSET_FILL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SAMPLE_ALPHA_TO_COVERAGE;
+BaseWebGLRenderingContext.prototype.SAMPLE_ALPHA_TO_COVERAGE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SAMPLE_COVERAGE;
+BaseWebGLRenderingContext.prototype.SAMPLE_COVERAGE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.NO_ERROR;
+BaseWebGLRenderingContext.prototype.NO_ERROR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.INVALID_ENUM;
+BaseWebGLRenderingContext.prototype.INVALID_ENUM;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.INVALID_VALUE;
+BaseWebGLRenderingContext.prototype.INVALID_VALUE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.INVALID_OPERATION;
+BaseWebGLRenderingContext.prototype.INVALID_OPERATION;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.OUT_OF_MEMORY;
+BaseWebGLRenderingContext.prototype.OUT_OF_MEMORY;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.CW;
+BaseWebGLRenderingContext.prototype.CW;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.CCW;
+BaseWebGLRenderingContext.prototype.CCW;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LINE_WIDTH;
+BaseWebGLRenderingContext.prototype.LINE_WIDTH;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ALIASED_POINT_SIZE_RANGE;
+BaseWebGLRenderingContext.prototype.ALIASED_POINT_SIZE_RANGE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ALIASED_LINE_WIDTH_RANGE;
+BaseWebGLRenderingContext.prototype.ALIASED_LINE_WIDTH_RANGE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.CULL_FACE_MODE;
+BaseWebGLRenderingContext.prototype.CULL_FACE_MODE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRONT_FACE;
+BaseWebGLRenderingContext.prototype.FRONT_FACE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_RANGE;
+BaseWebGLRenderingContext.prototype.DEPTH_RANGE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_WRITEMASK;
+BaseWebGLRenderingContext.prototype.DEPTH_WRITEMASK;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_CLEAR_VALUE;
+BaseWebGLRenderingContext.prototype.DEPTH_CLEAR_VALUE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_FUNC;
+BaseWebGLRenderingContext.prototype.DEPTH_FUNC;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_CLEAR_VALUE;
+BaseWebGLRenderingContext.prototype.STENCIL_CLEAR_VALUE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_FUNC;
+BaseWebGLRenderingContext.prototype.STENCIL_FUNC;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_FAIL;
+BaseWebGLRenderingContext.prototype.STENCIL_FAIL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_PASS_DEPTH_FAIL;
+BaseWebGLRenderingContext.prototype.STENCIL_PASS_DEPTH_FAIL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_PASS_DEPTH_PASS;
+BaseWebGLRenderingContext.prototype.STENCIL_PASS_DEPTH_PASS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_REF;
+BaseWebGLRenderingContext.prototype.STENCIL_REF;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_VALUE_MASK;
+BaseWebGLRenderingContext.prototype.STENCIL_VALUE_MASK;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_WRITEMASK;
+BaseWebGLRenderingContext.prototype.STENCIL_WRITEMASK;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_BACK_FUNC;
+BaseWebGLRenderingContext.prototype.STENCIL_BACK_FUNC;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_BACK_FAIL;
+BaseWebGLRenderingContext.prototype.STENCIL_BACK_FAIL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_BACK_PASS_DEPTH_FAIL;
+BaseWebGLRenderingContext.prototype.STENCIL_BACK_PASS_DEPTH_FAIL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_BACK_PASS_DEPTH_PASS;
+BaseWebGLRenderingContext.prototype.STENCIL_BACK_PASS_DEPTH_PASS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_BACK_REF;
+BaseWebGLRenderingContext.prototype.STENCIL_BACK_REF;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_BACK_VALUE_MASK;
+BaseWebGLRenderingContext.prototype.STENCIL_BACK_VALUE_MASK;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_BACK_WRITEMASK;
+BaseWebGLRenderingContext.prototype.STENCIL_BACK_WRITEMASK;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VIEWPORT;
+BaseWebGLRenderingContext.prototype.VIEWPORT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SCISSOR_BOX;
+BaseWebGLRenderingContext.prototype.SCISSOR_BOX;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.COLOR_CLEAR_VALUE;
+BaseWebGLRenderingContext.prototype.COLOR_CLEAR_VALUE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.COLOR_WRITEMASK;
+BaseWebGLRenderingContext.prototype.COLOR_WRITEMASK;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.UNPACK_ALIGNMENT;
+BaseWebGLRenderingContext.prototype.UNPACK_ALIGNMENT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.PACK_ALIGNMENT;
+BaseWebGLRenderingContext.prototype.PACK_ALIGNMENT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MAX_TEXTURE_SIZE;
+BaseWebGLRenderingContext.prototype.MAX_TEXTURE_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MAX_VIEWPORT_DIMS;
+BaseWebGLRenderingContext.prototype.MAX_VIEWPORT_DIMS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SUBPIXEL_BITS;
+BaseWebGLRenderingContext.prototype.SUBPIXEL_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RED_BITS;
+BaseWebGLRenderingContext.prototype.RED_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.GREEN_BITS;
+BaseWebGLRenderingContext.prototype.GREEN_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BLUE_BITS;
+BaseWebGLRenderingContext.prototype.BLUE_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ALPHA_BITS;
+BaseWebGLRenderingContext.prototype.ALPHA_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_BITS;
+BaseWebGLRenderingContext.prototype.DEPTH_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_BITS;
+BaseWebGLRenderingContext.prototype.STENCIL_BITS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.POLYGON_OFFSET_UNITS;
+BaseWebGLRenderingContext.prototype.POLYGON_OFFSET_UNITS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.POLYGON_OFFSET_FACTOR;
+BaseWebGLRenderingContext.prototype.POLYGON_OFFSET_FACTOR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_BINDING_2D;
+BaseWebGLRenderingContext.prototype.TEXTURE_BINDING_2D;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SAMPLE_BUFFERS;
+BaseWebGLRenderingContext.prototype.SAMPLE_BUFFERS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SAMPLES;
+BaseWebGLRenderingContext.prototype.SAMPLES;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SAMPLE_COVERAGE_VALUE;
+BaseWebGLRenderingContext.prototype.SAMPLE_COVERAGE_VALUE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SAMPLE_COVERAGE_INVERT;
+BaseWebGLRenderingContext.prototype.SAMPLE_COVERAGE_INVERT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.COMPRESSED_TEXTURE_FORMATS;
+BaseWebGLRenderingContext.prototype.COMPRESSED_TEXTURE_FORMATS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DONT_CARE;
+BaseWebGLRenderingContext.prototype.DONT_CARE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FASTEST;
+BaseWebGLRenderingContext.prototype.FASTEST;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.NICEST;
+BaseWebGLRenderingContext.prototype.NICEST;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.GENERATE_MIPMAP_HINT;
+BaseWebGLRenderingContext.prototype.GENERATE_MIPMAP_HINT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BYTE;
+BaseWebGLRenderingContext.prototype.BYTE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.UNSIGNED_BYTE;
+BaseWebGLRenderingContext.prototype.UNSIGNED_BYTE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SHORT;
+BaseWebGLRenderingContext.prototype.SHORT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.UNSIGNED_SHORT;
+BaseWebGLRenderingContext.prototype.UNSIGNED_SHORT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.INT;
+BaseWebGLRenderingContext.prototype.INT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.UNSIGNED_INT;
+BaseWebGLRenderingContext.prototype.UNSIGNED_INT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FLOAT;
+BaseWebGLRenderingContext.prototype.FLOAT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_COMPONENT;
+BaseWebGLRenderingContext.prototype.DEPTH_COMPONENT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ALPHA;
+BaseWebGLRenderingContext.prototype.ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RGB;
+BaseWebGLRenderingContext.prototype.RGB;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RGBA;
+BaseWebGLRenderingContext.prototype.RGBA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LUMINANCE;
+BaseWebGLRenderingContext.prototype.LUMINANCE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LUMINANCE_ALPHA;
+BaseWebGLRenderingContext.prototype.LUMINANCE_ALPHA;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.UNSIGNED_SHORT_4_4_4_4;
+BaseWebGLRenderingContext.prototype.UNSIGNED_SHORT_4_4_4_4;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.UNSIGNED_SHORT_5_5_5_1;
+BaseWebGLRenderingContext.prototype.UNSIGNED_SHORT_5_5_5_1;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.UNSIGNED_SHORT_5_6_5;
+BaseWebGLRenderingContext.prototype.UNSIGNED_SHORT_5_6_5;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAGMENT_SHADER;
+BaseWebGLRenderingContext.prototype.FRAGMENT_SHADER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VERTEX_SHADER;
+BaseWebGLRenderingContext.prototype.VERTEX_SHADER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MAX_VERTEX_ATTRIBS;
+BaseWebGLRenderingContext.prototype.MAX_VERTEX_ATTRIBS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MAX_VERTEX_UNIFORM_VECTORS;
+BaseWebGLRenderingContext.prototype.MAX_VERTEX_UNIFORM_VECTORS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MAX_VARYING_VECTORS;
+BaseWebGLRenderingContext.prototype.MAX_VARYING_VECTORS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MAX_COMBINED_TEXTURE_IMAGE_UNITS;
+BaseWebGLRenderingContext.prototype.MAX_COMBINED_TEXTURE_IMAGE_UNITS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MAX_VERTEX_TEXTURE_IMAGE_UNITS;
+BaseWebGLRenderingContext.prototype.MAX_VERTEX_TEXTURE_IMAGE_UNITS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MAX_TEXTURE_IMAGE_UNITS;
+BaseWebGLRenderingContext.prototype.MAX_TEXTURE_IMAGE_UNITS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MAX_FRAGMENT_UNIFORM_VECTORS;
+BaseWebGLRenderingContext.prototype.MAX_FRAGMENT_UNIFORM_VECTORS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SHADER_TYPE;
+BaseWebGLRenderingContext.prototype.SHADER_TYPE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DELETE_STATUS;
+BaseWebGLRenderingContext.prototype.DELETE_STATUS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LINK_STATUS;
+BaseWebGLRenderingContext.prototype.LINK_STATUS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VALIDATE_STATUS;
+BaseWebGLRenderingContext.prototype.VALIDATE_STATUS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ATTACHED_SHADERS;
+BaseWebGLRenderingContext.prototype.ATTACHED_SHADERS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ACTIVE_UNIFORMS;
+BaseWebGLRenderingContext.prototype.ACTIVE_UNIFORMS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ACTIVE_ATTRIBUTES;
+BaseWebGLRenderingContext.prototype.ACTIVE_ATTRIBUTES;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SHADING_LANGUAGE_VERSION;
+BaseWebGLRenderingContext.prototype.SHADING_LANGUAGE_VERSION;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.CURRENT_PROGRAM;
+BaseWebGLRenderingContext.prototype.CURRENT_PROGRAM;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.NEVER;
+BaseWebGLRenderingContext.prototype.NEVER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LESS;
+BaseWebGLRenderingContext.prototype.LESS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.EQUAL;
+BaseWebGLRenderingContext.prototype.EQUAL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LEQUAL;
+BaseWebGLRenderingContext.prototype.LEQUAL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.GREATER;
+BaseWebGLRenderingContext.prototype.GREATER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.NOTEQUAL;
+BaseWebGLRenderingContext.prototype.NOTEQUAL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.GEQUAL;
+BaseWebGLRenderingContext.prototype.GEQUAL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ALWAYS;
+BaseWebGLRenderingContext.prototype.ALWAYS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.KEEP;
+BaseWebGLRenderingContext.prototype.KEEP;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.REPLACE;
+BaseWebGLRenderingContext.prototype.REPLACE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.INCR;
+BaseWebGLRenderingContext.prototype.INCR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DECR;
+BaseWebGLRenderingContext.prototype.DECR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.INVERT;
+BaseWebGLRenderingContext.prototype.INVERT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.INCR_WRAP;
+BaseWebGLRenderingContext.prototype.INCR_WRAP;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DECR_WRAP;
+BaseWebGLRenderingContext.prototype.DECR_WRAP;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VENDOR;
+BaseWebGLRenderingContext.prototype.VENDOR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERER;
+BaseWebGLRenderingContext.prototype.RENDERER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VERSION;
+BaseWebGLRenderingContext.prototype.VERSION;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.NEAREST;
+BaseWebGLRenderingContext.prototype.NEAREST;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LINEAR;
+BaseWebGLRenderingContext.prototype.LINEAR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.NEAREST_MIPMAP_NEAREST;
+BaseWebGLRenderingContext.prototype.NEAREST_MIPMAP_NEAREST;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LINEAR_MIPMAP_NEAREST;
+BaseWebGLRenderingContext.prototype.LINEAR_MIPMAP_NEAREST;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.NEAREST_MIPMAP_LINEAR;
+BaseWebGLRenderingContext.prototype.NEAREST_MIPMAP_LINEAR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LINEAR_MIPMAP_LINEAR;
+BaseWebGLRenderingContext.prototype.LINEAR_MIPMAP_LINEAR;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_MAG_FILTER;
+BaseWebGLRenderingContext.prototype.TEXTURE_MAG_FILTER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_MIN_FILTER;
+BaseWebGLRenderingContext.prototype.TEXTURE_MIN_FILTER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_WRAP_S;
+BaseWebGLRenderingContext.prototype.TEXTURE_WRAP_S;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_WRAP_T;
+BaseWebGLRenderingContext.prototype.TEXTURE_WRAP_T;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_2D;
+BaseWebGLRenderingContext.prototype.TEXTURE_2D;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE;
+BaseWebGLRenderingContext.prototype.TEXTURE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_CUBE_MAP;
+BaseWebGLRenderingContext.prototype.TEXTURE_CUBE_MAP;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_BINDING_CUBE_MAP;
+BaseWebGLRenderingContext.prototype.TEXTURE_BINDING_CUBE_MAP;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_POSITIVE_X;
+BaseWebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_POSITIVE_X;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_NEGATIVE_X;
+BaseWebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_NEGATIVE_X;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_POSITIVE_Y;
+BaseWebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_POSITIVE_Y;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_NEGATIVE_Y;
+BaseWebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_NEGATIVE_Y;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_POSITIVE_Z;
+BaseWebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_POSITIVE_Z;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_NEGATIVE_Z;
+BaseWebGLRenderingContext.prototype.TEXTURE_CUBE_MAP_NEGATIVE_Z;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MAX_CUBE_MAP_TEXTURE_SIZE;
+BaseWebGLRenderingContext.prototype.MAX_CUBE_MAP_TEXTURE_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE0;
+BaseWebGLRenderingContext.prototype.TEXTURE0;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE1;
+BaseWebGLRenderingContext.prototype.TEXTURE1;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE2;
+BaseWebGLRenderingContext.prototype.TEXTURE2;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE3;
+BaseWebGLRenderingContext.prototype.TEXTURE3;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE4;
+BaseWebGLRenderingContext.prototype.TEXTURE4;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE5;
+BaseWebGLRenderingContext.prototype.TEXTURE5;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE6;
+BaseWebGLRenderingContext.prototype.TEXTURE6;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE7;
+BaseWebGLRenderingContext.prototype.TEXTURE7;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE8;
+BaseWebGLRenderingContext.prototype.TEXTURE8;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE9;
+BaseWebGLRenderingContext.prototype.TEXTURE9;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE10;
+BaseWebGLRenderingContext.prototype.TEXTURE10;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE11;
+BaseWebGLRenderingContext.prototype.TEXTURE11;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE12;
+BaseWebGLRenderingContext.prototype.TEXTURE12;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE13;
+BaseWebGLRenderingContext.prototype.TEXTURE13;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE14;
+BaseWebGLRenderingContext.prototype.TEXTURE14;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE15;
+BaseWebGLRenderingContext.prototype.TEXTURE15;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE16;
+BaseWebGLRenderingContext.prototype.TEXTURE16;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE17;
+BaseWebGLRenderingContext.prototype.TEXTURE17;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE18;
+BaseWebGLRenderingContext.prototype.TEXTURE18;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE19;
+BaseWebGLRenderingContext.prototype.TEXTURE19;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE20;
+BaseWebGLRenderingContext.prototype.TEXTURE20;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE21;
+BaseWebGLRenderingContext.prototype.TEXTURE21;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE22;
+BaseWebGLRenderingContext.prototype.TEXTURE22;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE23;
+BaseWebGLRenderingContext.prototype.TEXTURE23;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE24;
+BaseWebGLRenderingContext.prototype.TEXTURE24;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE25;
+BaseWebGLRenderingContext.prototype.TEXTURE25;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE26;
+BaseWebGLRenderingContext.prototype.TEXTURE26;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE27;
+BaseWebGLRenderingContext.prototype.TEXTURE27;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE28;
+BaseWebGLRenderingContext.prototype.TEXTURE28;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE29;
+BaseWebGLRenderingContext.prototype.TEXTURE29;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE30;
+BaseWebGLRenderingContext.prototype.TEXTURE30;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.TEXTURE31;
+BaseWebGLRenderingContext.prototype.TEXTURE31;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.ACTIVE_TEXTURE;
+BaseWebGLRenderingContext.prototype.ACTIVE_TEXTURE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.REPEAT;
+BaseWebGLRenderingContext.prototype.REPEAT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.CLAMP_TO_EDGE;
+BaseWebGLRenderingContext.prototype.CLAMP_TO_EDGE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MIRRORED_REPEAT;
+BaseWebGLRenderingContext.prototype.MIRRORED_REPEAT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FLOAT_VEC2;
+BaseWebGLRenderingContext.prototype.FLOAT_VEC2;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FLOAT_VEC3;
+BaseWebGLRenderingContext.prototype.FLOAT_VEC3;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FLOAT_VEC4;
+BaseWebGLRenderingContext.prototype.FLOAT_VEC4;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.INT_VEC2;
+BaseWebGLRenderingContext.prototype.INT_VEC2;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.INT_VEC3;
+BaseWebGLRenderingContext.prototype.INT_VEC3;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.INT_VEC4;
+BaseWebGLRenderingContext.prototype.INT_VEC4;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BOOL;
+BaseWebGLRenderingContext.prototype.BOOL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BOOL_VEC2;
+BaseWebGLRenderingContext.prototype.BOOL_VEC2;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BOOL_VEC3;
+BaseWebGLRenderingContext.prototype.BOOL_VEC3;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BOOL_VEC4;
+BaseWebGLRenderingContext.prototype.BOOL_VEC4;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FLOAT_MAT2;
+BaseWebGLRenderingContext.prototype.FLOAT_MAT2;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FLOAT_MAT3;
+BaseWebGLRenderingContext.prototype.FLOAT_MAT3;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FLOAT_MAT4;
+BaseWebGLRenderingContext.prototype.FLOAT_MAT4;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SAMPLER_2D;
+BaseWebGLRenderingContext.prototype.SAMPLER_2D;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.SAMPLER_CUBE;
+BaseWebGLRenderingContext.prototype.SAMPLER_CUBE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_ENABLED;
+BaseWebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_ENABLED;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_SIZE;
+BaseWebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_STRIDE;
+BaseWebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_STRIDE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_TYPE;
+BaseWebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_TYPE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_NORMALIZED;
+BaseWebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_NORMALIZED;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_POINTER;
+BaseWebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_POINTER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING;
+BaseWebGLRenderingContext.prototype.VERTEX_ATTRIB_ARRAY_BUFFER_BINDING;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.COMPILE_STATUS;
+BaseWebGLRenderingContext.prototype.COMPILE_STATUS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LOW_FLOAT;
+BaseWebGLRenderingContext.prototype.LOW_FLOAT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MEDIUM_FLOAT;
+BaseWebGLRenderingContext.prototype.MEDIUM_FLOAT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.HIGH_FLOAT;
+BaseWebGLRenderingContext.prototype.HIGH_FLOAT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.LOW_INT;
+BaseWebGLRenderingContext.prototype.LOW_INT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MEDIUM_INT;
+BaseWebGLRenderingContext.prototype.MEDIUM_INT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.HIGH_INT;
+BaseWebGLRenderingContext.prototype.HIGH_INT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAMEBUFFER;
+BaseWebGLRenderingContext.prototype.FRAMEBUFFER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERBUFFER;
+BaseWebGLRenderingContext.prototype.RENDERBUFFER;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RGBA4;
+BaseWebGLRenderingContext.prototype.RGBA4;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RGB5_A1;
+BaseWebGLRenderingContext.prototype.RGB5_A1;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RGB565;
+BaseWebGLRenderingContext.prototype.RGB565;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_COMPONENT16;
+BaseWebGLRenderingContext.prototype.DEPTH_COMPONENT16;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_INDEX;
+BaseWebGLRenderingContext.prototype.STENCIL_INDEX;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_INDEX8;
+BaseWebGLRenderingContext.prototype.STENCIL_INDEX8;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_STENCIL;
+BaseWebGLRenderingContext.prototype.DEPTH_STENCIL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERBUFFER_WIDTH;
+BaseWebGLRenderingContext.prototype.RENDERBUFFER_WIDTH;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERBUFFER_HEIGHT;
+BaseWebGLRenderingContext.prototype.RENDERBUFFER_HEIGHT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERBUFFER_INTERNAL_FORMAT;
+BaseWebGLRenderingContext.prototype.RENDERBUFFER_INTERNAL_FORMAT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERBUFFER_RED_SIZE;
+BaseWebGLRenderingContext.prototype.RENDERBUFFER_RED_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERBUFFER_GREEN_SIZE;
+BaseWebGLRenderingContext.prototype.RENDERBUFFER_GREEN_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERBUFFER_BLUE_SIZE;
+BaseWebGLRenderingContext.prototype.RENDERBUFFER_BLUE_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERBUFFER_ALPHA_SIZE;
+BaseWebGLRenderingContext.prototype.RENDERBUFFER_ALPHA_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERBUFFER_DEPTH_SIZE;
+BaseWebGLRenderingContext.prototype.RENDERBUFFER_DEPTH_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERBUFFER_STENCIL_SIZE;
+BaseWebGLRenderingContext.prototype.RENDERBUFFER_STENCIL_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE;
+BaseWebGLRenderingContext.prototype.FRAMEBUFFER_ATTACHMENT_OBJECT_TYPE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAMEBUFFER_ATTACHMENT_OBJECT_NAME;
+BaseWebGLRenderingContext.prototype.FRAMEBUFFER_ATTACHMENT_OBJECT_NAME;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL;
+BaseWebGLRenderingContext.prototype.FRAMEBUFFER_ATTACHMENT_TEXTURE_LEVEL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE;
+BaseWebGLRenderingContext.prototype.FRAMEBUFFER_ATTACHMENT_TEXTURE_CUBE_MAP_FACE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.COLOR_ATTACHMENT0;
+BaseWebGLRenderingContext.prototype.COLOR_ATTACHMENT0;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_ATTACHMENT;
+BaseWebGLRenderingContext.prototype.DEPTH_ATTACHMENT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.STENCIL_ATTACHMENT;
+BaseWebGLRenderingContext.prototype.STENCIL_ATTACHMENT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.DEPTH_STENCIL_ATTACHMENT;
+BaseWebGLRenderingContext.prototype.DEPTH_STENCIL_ATTACHMENT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.NONE;
+BaseWebGLRenderingContext.prototype.NONE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAMEBUFFER_COMPLETE;
+BaseWebGLRenderingContext.prototype.FRAMEBUFFER_COMPLETE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAMEBUFFER_INCOMPLETE_ATTACHMENT;
+BaseWebGLRenderingContext.prototype.FRAMEBUFFER_INCOMPLETE_ATTACHMENT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT;
+BaseWebGLRenderingContext.prototype.FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAMEBUFFER_INCOMPLETE_DIMENSIONS;
+BaseWebGLRenderingContext.prototype.FRAMEBUFFER_INCOMPLETE_DIMENSIONS;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAMEBUFFER_UNSUPPORTED;
+BaseWebGLRenderingContext.prototype.FRAMEBUFFER_UNSUPPORTED;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.FRAMEBUFFER_BINDING;
+BaseWebGLRenderingContext.prototype.FRAMEBUFFER_BINDING;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.RENDERBUFFER_BINDING;
+BaseWebGLRenderingContext.prototype.RENDERBUFFER_BINDING;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.MAX_RENDERBUFFER_SIZE;
+BaseWebGLRenderingContext.prototype.MAX_RENDERBUFFER_SIZE;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.INVALID_FRAMEBUFFER_OPERATION;
+BaseWebGLRenderingContext.prototype.INVALID_FRAMEBUFFER_OPERATION;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.UNPACK_FLIP_Y_WEBGL;
+BaseWebGLRenderingContext.prototype.UNPACK_FLIP_Y_WEBGL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.UNPACK_PREMULTIPLY_ALPHA_WEBGL;
+BaseWebGLRenderingContext.prototype.UNPACK_PREMULTIPLY_ALPHA_WEBGL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.CONTEXT_LOST_WEBGL;
+BaseWebGLRenderingContext.prototype.CONTEXT_LOST_WEBGL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.UNPACK_COLORSPACE_CONVERSION_WEBGL;
+BaseWebGLRenderingContext.prototype.UNPACK_COLORSPACE_CONVERSION_WEBGL;
 
 /** @const {number} */
-WebGLRenderingContext.prototype.BROWSER_DEFAULT_WEBGL;
+BaseWebGLRenderingContext.prototype.BROWSER_DEFAULT_WEBGL;
 
 
 /**
  * @type {!HTMLCanvasElement}
  */
-WebGLRenderingContext.prototype.canvas;
+BaseWebGLRenderingContext.prototype.canvas;
 
 /**
  * @type {string}
  */
-WebGLRenderingContext.prototype.drawingBufferColorSpace;
+BaseWebGLRenderingContext.prototype.drawingBufferColorSpace;
 
 /**
  * @type {number}
  */
-WebGLRenderingContext.prototype.drawingBufferWidth;
+BaseWebGLRenderingContext.prototype.drawingBufferWidth;
 
 /**
  * @type {number}
  */
-WebGLRenderingContext.prototype.drawingBufferHeight;
+BaseWebGLRenderingContext.prototype.drawingBufferHeight;
 
 /**
  * @return {!WebGLContextAttributes}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getContextAttributes = function() {};
+BaseWebGLRenderingContext.prototype.getContextAttributes = function() {};
 
 /**
  * @return {boolean}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.isContextLost = function() {};
+BaseWebGLRenderingContext.prototype.isContextLost = function() {};
 
 /**
  * @return {!Array<string>}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getSupportedExtensions = function() {};
+BaseWebGLRenderingContext.prototype.getSupportedExtensions = function() {};
 
 /**
  * Note that this has side effects by enabling the extension even if the
@@ -1860,25 +1866,25 @@ WebGLRenderingContext.prototype.getSupportedExtensions = function() {};
  * @param {string} name
  * @return {Object}
  */
-WebGLRenderingContext.prototype.getExtension = function(name) {};
+BaseWebGLRenderingContext.prototype.getExtension = function(name) {};
 
 /**
  * @type {string}
  */
-WebGLRenderingContext.prototype.unpackColorSpace;
+BaseWebGLRenderingContext.prototype.unpackColorSpace;
 
 /**
  * @param {number} texture
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.activeTexture = function(texture) {};
+BaseWebGLRenderingContext.prototype.activeTexture = function(texture) {};
 
 /**
  * @param {WebGLProgram} program
  * @param {WebGLShader} shader
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.attachShader = function(program, shader) {};
+BaseWebGLRenderingContext.prototype.attachShader = function(program, shader) {};
 
 /**
  * @param {WebGLProgram} program
@@ -1886,7 +1892,7 @@ WebGLRenderingContext.prototype.attachShader = function(program, shader) {};
  * @param {string} name
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.bindAttribLocation = function(
+BaseWebGLRenderingContext.prototype.bindAttribLocation = function(
     program, index, name) {};
 
 /**
@@ -1894,28 +1900,28 @@ WebGLRenderingContext.prototype.bindAttribLocation = function(
  * @param {WebGLBuffer} buffer
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.bindBuffer = function(target, buffer) {};
+BaseWebGLRenderingContext.prototype.bindBuffer = function(target, buffer) {};
 
 /**
  * @param {number} target
  * @param {WebGLFramebuffer} buffer
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.bindFramebuffer = function(target, buffer) {};
+BaseWebGLRenderingContext.prototype.bindFramebuffer = function(target, buffer) {};
 
 /**
  * @param {number} target
  * @param {WebGLRenderbuffer} buffer
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.bindRenderbuffer = function(target, buffer) {};
+BaseWebGLRenderingContext.prototype.bindRenderbuffer = function(target, buffer) {};
 
 /**
  * @param {number} target
  * @param {WebGLTexture} texture
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.bindTexture = function(target, texture) {};
+BaseWebGLRenderingContext.prototype.bindTexture = function(target, texture) {};
 
 /**
  * @param {number} red
@@ -1924,21 +1930,21 @@ WebGLRenderingContext.prototype.bindTexture = function(target, texture) {};
  * @param {number} alpha
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.blendColor = function(
+BaseWebGLRenderingContext.prototype.blendColor = function(
     red, green, blue, alpha) {};
 
 /**
  * @param {number} mode
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.blendEquation = function(mode) {};
+BaseWebGLRenderingContext.prototype.blendEquation = function(mode) {};
 
 /**
  * @param {number} modeRGB
  * @param {number} modeAlpha
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.blendEquationSeparate = function(
+BaseWebGLRenderingContext.prototype.blendEquationSeparate = function(
     modeRGB, modeAlpha) {};
 
 /**
@@ -1946,7 +1952,7 @@ WebGLRenderingContext.prototype.blendEquationSeparate = function(
  * @param {number} dfactor
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.blendFunc = function(sfactor, dfactor) {};
+BaseWebGLRenderingContext.prototype.blendFunc = function(sfactor, dfactor) {};
 
 /**
  * @param {number} srcRGB
@@ -1955,7 +1961,7 @@ WebGLRenderingContext.prototype.blendFunc = function(sfactor, dfactor) {};
  * @param {number} dstAlpha
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.blendFuncSeparate = function(
+BaseWebGLRenderingContext.prototype.blendFuncSeparate = function(
     srcRGB, dstRGB, srcAlpha, dstAlpha) {};
 
 /**
@@ -1964,7 +1970,7 @@ WebGLRenderingContext.prototype.blendFuncSeparate = function(
  * @param {number} usage
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.bufferData = function(target, data, usage) {};
+BaseWebGLRenderingContext.prototype.bufferData = function(target, data, usage) {};
 
 /**
  * @param {number} target
@@ -1972,20 +1978,20 @@ WebGLRenderingContext.prototype.bufferData = function(target, data, usage) {};
  * @param {ArrayBufferView|ArrayBuffer} data
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.bufferSubData = function(
+BaseWebGLRenderingContext.prototype.bufferSubData = function(
     target, offset, data) {};
 
 /**
  * @param {number} target
  * @return {number}
  */
-WebGLRenderingContext.prototype.checkFramebufferStatus = function(target) {};
+BaseWebGLRenderingContext.prototype.checkFramebufferStatus = function(target) {};
 
 /**
  * @param {number} mask
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.clear = function(mask) {};
+BaseWebGLRenderingContext.prototype.clear = function(mask) {};
 
 /**
  * @param {number} red
@@ -1994,20 +2000,20 @@ WebGLRenderingContext.prototype.clear = function(mask) {};
  * @param {number} alpha
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.clearColor = function(
+BaseWebGLRenderingContext.prototype.clearColor = function(
     red, green, blue, alpha) {};
 
 /**
  * @param {number} depth
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.clearDepth = function(depth) {};
+BaseWebGLRenderingContext.prototype.clearDepth = function(depth) {};
 
 /**
  * @param {number} s
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.clearStencil = function(s) {};
+BaseWebGLRenderingContext.prototype.clearStencil = function(s) {};
 
 /**
  * @param {boolean} red
@@ -2016,14 +2022,14 @@ WebGLRenderingContext.prototype.clearStencil = function(s) {};
  * @param {boolean} alpha
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.colorMask = function(
+BaseWebGLRenderingContext.prototype.colorMask = function(
     red, green, blue, alpha) {};
 
 /**
  * @param {WebGLShader} shader
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.compileShader = function(shader) {};
+BaseWebGLRenderingContext.prototype.compileShader = function(shader) {};
 
 /**
  * @param {number} target
@@ -2035,7 +2041,7 @@ WebGLRenderingContext.prototype.compileShader = function(shader) {};
  * @param {ArrayBufferView} data
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.compressedTexImage2D = function(
+BaseWebGLRenderingContext.prototype.compressedTexImage2D = function(
     target, level, internalformat, width, height, border, data) {};
 
 /**
@@ -2049,7 +2055,7 @@ WebGLRenderingContext.prototype.compressedTexImage2D = function(
  * @param {ArrayBufferView} data
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.compressedTexSubImage2D = function(
+BaseWebGLRenderingContext.prototype.compressedTexSubImage2D = function(
     target, level, xoffset, yoffset, width, height, format, data) {};
 
 /**
@@ -2063,7 +2069,7 @@ WebGLRenderingContext.prototype.compressedTexSubImage2D = function(
  * @param {number} border
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.copyTexImage2D = function(
+BaseWebGLRenderingContext.prototype.copyTexImage2D = function(
     target, level, format, x, y, width, height, border) {};
 
 /**
@@ -2077,125 +2083,125 @@ WebGLRenderingContext.prototype.copyTexImage2D = function(
  * @param {number} height
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.copyTexSubImage2D = function(
+BaseWebGLRenderingContext.prototype.copyTexSubImage2D = function(
     target, level, xoffset, yoffset, x, y, width, height) {};
 
 /**
  * @return {!WebGLBuffer}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.createBuffer = function() {};
+BaseWebGLRenderingContext.prototype.createBuffer = function() {};
 
 /**
  * @return {!WebGLFramebuffer}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.createFramebuffer = function() {};
+BaseWebGLRenderingContext.prototype.createFramebuffer = function() {};
 
 /**
  * @return {!WebGLProgram}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.createProgram = function() {};
+BaseWebGLRenderingContext.prototype.createProgram = function() {};
 
 /**
  * @return {!WebGLRenderbuffer}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.createRenderbuffer = function() {};
+BaseWebGLRenderingContext.prototype.createRenderbuffer = function() {};
 
 /**
  * @param {number} type
  * @return {!WebGLShader}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.createShader = function(type) {};
+BaseWebGLRenderingContext.prototype.createShader = function(type) {};
 
 /**
  * @return {!WebGLTexture}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.createTexture = function() {};
+BaseWebGLRenderingContext.prototype.createTexture = function() {};
 
 /**
  * @param {number} mode
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.cullFace = function(mode) {};
+BaseWebGLRenderingContext.prototype.cullFace = function(mode) {};
 
 /**
  * @param {WebGLBuffer} buffer
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.deleteBuffer = function(buffer) {};
+BaseWebGLRenderingContext.prototype.deleteBuffer = function(buffer) {};
 
 /**
  * @param {WebGLFramebuffer} buffer
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.deleteFramebuffer = function(buffer) {};
+BaseWebGLRenderingContext.prototype.deleteFramebuffer = function(buffer) {};
 
 /**
  * @param {WebGLProgram} program
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.deleteProgram = function(program) {};
+BaseWebGLRenderingContext.prototype.deleteProgram = function(program) {};
 
 /**
  * @param {WebGLRenderbuffer} buffer
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.deleteRenderbuffer = function(buffer) {};
+BaseWebGLRenderingContext.prototype.deleteRenderbuffer = function(buffer) {};
 
 /**
  * @param {WebGLShader} shader
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.deleteShader = function(shader) {};
+BaseWebGLRenderingContext.prototype.deleteShader = function(shader) {};
 
 /**
  * @param {WebGLTexture} texture
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.deleteTexture = function(texture) {};
+BaseWebGLRenderingContext.prototype.deleteTexture = function(texture) {};
 
 /**
  * @param {number} func
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.depthFunc = function(func) {};
+BaseWebGLRenderingContext.prototype.depthFunc = function(func) {};
 
 /**
  * @param {boolean} flag
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.depthMask = function(flag) {};
+BaseWebGLRenderingContext.prototype.depthMask = function(flag) {};
 
 /**
  * @param {number} nearVal
  * @param {number} farVal
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.depthRange = function(nearVal, farVal) {};
+BaseWebGLRenderingContext.prototype.depthRange = function(nearVal, farVal) {};
 
 /**
  * @param {WebGLProgram} program
  * @param {WebGLShader} shader
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.detachShader = function(program, shader) {};
+BaseWebGLRenderingContext.prototype.detachShader = function(program, shader) {};
 
 /**
  * @param {number} flags
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.disable = function(flags) {};
+BaseWebGLRenderingContext.prototype.disable = function(flags) {};
 
 /**
  * @param {number} index
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.disableVertexAttribArray = function(
+BaseWebGLRenderingContext.prototype.disableVertexAttribArray = function(
     index) {};
 
 /**
@@ -2204,7 +2210,7 @@ WebGLRenderingContext.prototype.disableVertexAttribArray = function(
  * @param {number} count
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.drawArrays = function(mode, first, count) {};
+BaseWebGLRenderingContext.prototype.drawArrays = function(mode, first, count) {};
 
 /**
  * @param {number} mode
@@ -2213,25 +2219,25 @@ WebGLRenderingContext.prototype.drawArrays = function(mode, first, count) {};
  * @param {number} offset
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.drawElements = function(
+BaseWebGLRenderingContext.prototype.drawElements = function(
     mode, count, type, offset) {};
 
 /**
  * @param {number} cap
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.enable = function(cap) {};
+BaseWebGLRenderingContext.prototype.enable = function(cap) {};
 
 /**
  * @param {number} index
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.enableVertexAttribArray = function(
+BaseWebGLRenderingContext.prototype.enableVertexAttribArray = function(
     index) {};
 
-WebGLRenderingContext.prototype.finish = function() {};
+BaseWebGLRenderingContext.prototype.finish = function() {};
 
-WebGLRenderingContext.prototype.flush = function() {};
+BaseWebGLRenderingContext.prototype.flush = function() {};
 
 /**
  * @param {number} target
@@ -2240,7 +2246,7 @@ WebGLRenderingContext.prototype.flush = function() {};
  * @param {WebGLRenderbuffer} renderbuffer
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.framebufferRenderbuffer = function(
+BaseWebGLRenderingContext.prototype.framebufferRenderbuffer = function(
     target, attachment, renderbuffertarget, renderbuffer) {};
 
 /**
@@ -2251,20 +2257,20 @@ WebGLRenderingContext.prototype.framebufferRenderbuffer = function(
  * @param {number} level
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.framebufferTexture2D = function(
+BaseWebGLRenderingContext.prototype.framebufferTexture2D = function(
     target, attachment, textarget, texture, level) {};
 
 /**
  * @param {number} mode
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.frontFace = function(mode) {};
+BaseWebGLRenderingContext.prototype.frontFace = function(mode) {};
 
 /**
  * @param {number} target
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.generateMipmap = function(target) {};
+BaseWebGLRenderingContext.prototype.generateMipmap = function(target) {};
 
 /**
  * @param {WebGLProgram} program
@@ -2272,7 +2278,7 @@ WebGLRenderingContext.prototype.generateMipmap = function(target) {};
  * @return {WebGLActiveInfo}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getActiveAttrib = function(program, index) {};
+BaseWebGLRenderingContext.prototype.getActiveAttrib = function(program, index) {};
 
 /**
  * @param {WebGLProgram} program
@@ -2280,14 +2286,14 @@ WebGLRenderingContext.prototype.getActiveAttrib = function(program, index) {};
  * @return {WebGLActiveInfo}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getActiveUniform = function(program, index) {};
+BaseWebGLRenderingContext.prototype.getActiveUniform = function(program, index) {};
 
 /**
  * @param {WebGLProgram} program
  * @return {!Array<WebGLShader>}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getAttachedShaders = function(program) {};
+BaseWebGLRenderingContext.prototype.getAttachedShaders = function(program) {};
 
 /**
  * @param {WebGLProgram} program
@@ -2295,7 +2301,7 @@ WebGLRenderingContext.prototype.getAttachedShaders = function(program) {};
  * @return {number}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getAttribLocation = function(program, name) {};
+BaseWebGLRenderingContext.prototype.getAttribLocation = function(program, name) {};
 
 /**
  * @param {number} target
@@ -2303,20 +2309,20 @@ WebGLRenderingContext.prototype.getAttribLocation = function(program, name) {};
  * @return {*}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getBufferParameter = function(target, pname) {};
+BaseWebGLRenderingContext.prototype.getBufferParameter = function(target, pname) {};
 
 /**
  * @param {number} pname
  * @return {*}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getParameter = function(pname) {};
+BaseWebGLRenderingContext.prototype.getParameter = function(pname) {};
 
 /**
  * @return {number}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getError = function() {};
+BaseWebGLRenderingContext.prototype.getError = function() {};
 
 /**
  * @param {number} target
@@ -2325,7 +2331,7 @@ WebGLRenderingContext.prototype.getError = function() {};
  * @return {*}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getFramebufferAttachmentParameter = function(
+BaseWebGLRenderingContext.prototype.getFramebufferAttachmentParameter = function(
     target, attachment, pname) {};
 
 /**
@@ -2334,7 +2340,7 @@ WebGLRenderingContext.prototype.getFramebufferAttachmentParameter = function(
  * @return {*}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getProgramParameter = function(
+BaseWebGLRenderingContext.prototype.getProgramParameter = function(
     program, pname) {};
 
 /**
@@ -2342,7 +2348,7 @@ WebGLRenderingContext.prototype.getProgramParameter = function(
  * @return {string}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getProgramInfoLog = function(program) {};
+BaseWebGLRenderingContext.prototype.getProgramInfoLog = function(program) {};
 
 /**
  * @param {number} target
@@ -2350,7 +2356,7 @@ WebGLRenderingContext.prototype.getProgramInfoLog = function(program) {};
  * @return {*}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getRenderbufferParameter = function(
+BaseWebGLRenderingContext.prototype.getRenderbufferParameter = function(
     target, pname) {};
 
 /**
@@ -2359,7 +2365,7 @@ WebGLRenderingContext.prototype.getRenderbufferParameter = function(
  * @return {*}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getShaderParameter = function(shader, pname) {};
+BaseWebGLRenderingContext.prototype.getShaderParameter = function(shader, pname) {};
 
 /**
  * @param {number} shadertype
@@ -2367,7 +2373,7 @@ WebGLRenderingContext.prototype.getShaderParameter = function(shader, pname) {};
  * @return {WebGLShaderPrecisionFormat}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getShaderPrecisionFormat = function(shadertype,
+BaseWebGLRenderingContext.prototype.getShaderPrecisionFormat = function(shadertype,
     precisiontype) {};
 
 /**
@@ -2375,14 +2381,14 @@ WebGLRenderingContext.prototype.getShaderPrecisionFormat = function(shadertype,
  * @return {string}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getShaderInfoLog = function(shader) {};
+BaseWebGLRenderingContext.prototype.getShaderInfoLog = function(shader) {};
 
 /**
  * @param {WebGLShader} shader
  * @return {string}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getShaderSource = function(shader) {};
+BaseWebGLRenderingContext.prototype.getShaderSource = function(shader) {};
 
 /**
  * @param {number} target
@@ -2390,7 +2396,7 @@ WebGLRenderingContext.prototype.getShaderSource = function(shader) {};
  * @return {*}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getTexParameter = function(target, pname) {};
+BaseWebGLRenderingContext.prototype.getTexParameter = function(target, pname) {};
 
 /**
  * @param {WebGLProgram} program
@@ -2398,7 +2404,7 @@ WebGLRenderingContext.prototype.getTexParameter = function(target, pname) {};
  * @return {*}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getUniform = function(program, location) {};
+BaseWebGLRenderingContext.prototype.getUniform = function(program, location) {};
 
 /**
  * @param {WebGLProgram} program
@@ -2406,7 +2412,7 @@ WebGLRenderingContext.prototype.getUniform = function(program, location) {};
  * @return {WebGLUniformLocation}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getUniformLocation = function(program, name) {};
+BaseWebGLRenderingContext.prototype.getUniformLocation = function(program, name) {};
 
 /**
  * @param {number} index
@@ -2414,7 +2420,7 @@ WebGLRenderingContext.prototype.getUniformLocation = function(program, name) {};
  * @return {*}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getVertexAttrib = function(index, pname) {};
+BaseWebGLRenderingContext.prototype.getVertexAttrib = function(index, pname) {};
 
 /**
  * @param {number} index
@@ -2422,7 +2428,7 @@ WebGLRenderingContext.prototype.getVertexAttrib = function(index, pname) {};
  * @return {number}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.getVertexAttribOffset = function(
+BaseWebGLRenderingContext.prototype.getVertexAttribOffset = function(
     index, pname) {};
 
 /**
@@ -2430,82 +2436,82 @@ WebGLRenderingContext.prototype.getVertexAttribOffset = function(
  * @param {number} mode
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.hint = function(target, mode) {};
+BaseWebGLRenderingContext.prototype.hint = function(target, mode) {};
 
 /**
  * @param {WebGLObject} buffer
  * @return {boolean}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.isBuffer = function(buffer) {};
+BaseWebGLRenderingContext.prototype.isBuffer = function(buffer) {};
 
 /**
  * @param {number} cap
  * @return {boolean}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.isEnabled = function(cap) {};
+BaseWebGLRenderingContext.prototype.isEnabled = function(cap) {};
 
 /**
  * @param {WebGLObject} framebuffer
  * @return {boolean}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.isFramebuffer = function(framebuffer) {};
+BaseWebGLRenderingContext.prototype.isFramebuffer = function(framebuffer) {};
 
 /**
  * @param {WebGLObject} program
  * @return {boolean}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.isProgram = function(program) {};
+BaseWebGLRenderingContext.prototype.isProgram = function(program) {};
 
 /**
  * @param {WebGLObject} renderbuffer
  * @return {boolean}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.isRenderbuffer = function(renderbuffer) {};
+BaseWebGLRenderingContext.prototype.isRenderbuffer = function(renderbuffer) {};
 
 /**
  * @param {WebGLObject} shader
  * @return {boolean}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.isShader = function(shader) {};
+BaseWebGLRenderingContext.prototype.isShader = function(shader) {};
 
 /**
  * @param {WebGLObject} texture
  * @return {boolean}
  * @nosideeffects
  */
-WebGLRenderingContext.prototype.isTexture = function(texture) {};
+BaseWebGLRenderingContext.prototype.isTexture = function(texture) {};
 
 /**
  * @param {number} width
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.lineWidth = function(width) {};
+BaseWebGLRenderingContext.prototype.lineWidth = function(width) {};
 
 /**
  * @param {WebGLProgram} program
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.linkProgram = function(program) {};
+BaseWebGLRenderingContext.prototype.linkProgram = function(program) {};
 
 /**
  * @param {number} pname
  * @param {number|boolean} param
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.pixelStorei = function(pname, param) {};
+BaseWebGLRenderingContext.prototype.pixelStorei = function(pname, param) {};
 
 /**
  * @param {number} factor
  * @param {number} units
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.polygonOffset = function(factor, units) {};
+BaseWebGLRenderingContext.prototype.polygonOffset = function(factor, units) {};
 
 /**
  * @param {number} x
@@ -2517,7 +2523,7 @@ WebGLRenderingContext.prototype.polygonOffset = function(factor, units) {};
  * @param {ArrayBufferView} pixels
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.readPixels = function(
+BaseWebGLRenderingContext.prototype.readPixels = function(
     x, y, width, height, format, type, pixels) {};
 
 /**
@@ -2527,7 +2533,7 @@ WebGLRenderingContext.prototype.readPixels = function(
  * @param {number} height
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.renderbufferStorage = function(
+BaseWebGLRenderingContext.prototype.renderbufferStorage = function(
     target, internalformat, width, height) {};
 
 /**
@@ -2535,7 +2541,7 @@ WebGLRenderingContext.prototype.renderbufferStorage = function(
  * @param {boolean} invert
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.sampleCoverage = function(coverage, invert) {};
+BaseWebGLRenderingContext.prototype.sampleCoverage = function(coverage, invert) {};
 
 /**
  * @param {number} x
@@ -2544,14 +2550,14 @@ WebGLRenderingContext.prototype.sampleCoverage = function(coverage, invert) {};
  * @param {number} height
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.scissor = function(x, y, width, height) {};
+BaseWebGLRenderingContext.prototype.scissor = function(x, y, width, height) {};
 
 /**
  * @param {WebGLShader} shader
  * @param {string} source
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.shaderSource = function(shader, source) {};
+BaseWebGLRenderingContext.prototype.shaderSource = function(shader, source) {};
 
 /**
  * @param {number} func
@@ -2559,7 +2565,7 @@ WebGLRenderingContext.prototype.shaderSource = function(shader, source) {};
  * @param {number} mask
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.stencilFunc = function(func, ref, mask) {};
+BaseWebGLRenderingContext.prototype.stencilFunc = function(func, ref, mask) {};
 
 /**
  * @param {number} face
@@ -2568,21 +2574,21 @@ WebGLRenderingContext.prototype.stencilFunc = function(func, ref, mask) {};
  * @param {number} mask
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.stencilFuncSeparate = function(
+BaseWebGLRenderingContext.prototype.stencilFuncSeparate = function(
     face, func, ref, mask) {};
 
 /**
  * @param {number} mask
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.stencilMask = function(mask) {};
+BaseWebGLRenderingContext.prototype.stencilMask = function(mask) {};
 
 /**
  * @param {number} face
  * @param {number} mask
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.stencilMaskSeparate = function(face, mask) {};
+BaseWebGLRenderingContext.prototype.stencilMaskSeparate = function(face, mask) {};
 
 /**
  * @param {number} fail
@@ -2590,7 +2596,7 @@ WebGLRenderingContext.prototype.stencilMaskSeparate = function(face, mask) {};
  * @param {number} zpass
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.stencilOp = function(fail, zfail, zpass) {};
+BaseWebGLRenderingContext.prototype.stencilOp = function(fail, zfail, zpass) {};
 
 /**
  * @param {number} face
@@ -2599,7 +2605,7 @@ WebGLRenderingContext.prototype.stencilOp = function(fail, zfail, zpass) {};
  * @param {number} zpass
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.stencilOpSeparate = function(
+BaseWebGLRenderingContext.prototype.stencilOpSeparate = function(
     face, fail, zfail, zpass) {};
 
 /**
@@ -2614,7 +2620,7 @@ WebGLRenderingContext.prototype.stencilOpSeparate = function(
  * @param {ArrayBufferView=} opt_pixels
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.texImage2D = function(
+BaseWebGLRenderingContext.prototype.texImage2D = function(
     target, level, internalformat, format, type, img, opt_format, opt_type,
     opt_pixels) {};
 
@@ -2624,7 +2630,7 @@ WebGLRenderingContext.prototype.texImage2D = function(
  * @param {number} param
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.texParameterf = function(
+BaseWebGLRenderingContext.prototype.texParameterf = function(
     target, pname, param) {};
 
 /**
@@ -2633,7 +2639,7 @@ WebGLRenderingContext.prototype.texParameterf = function(
  * @param {number} param
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.texParameteri = function(
+BaseWebGLRenderingContext.prototype.texParameteri = function(
     target, pname, param) {};
 
 /**
@@ -2648,7 +2654,7 @@ WebGLRenderingContext.prototype.texParameteri = function(
  * @param {ArrayBufferView=} opt_pixels
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.texSubImage2D = function(
+BaseWebGLRenderingContext.prototype.texSubImage2D = function(
     target, level, xoffset, yoffset, format, type, data, opt_type,
     opt_pixels) {};
 
@@ -2657,28 +2663,28 @@ WebGLRenderingContext.prototype.texSubImage2D = function(
  * @param {number} value
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform1f = function(location, value) {};
+BaseWebGLRenderingContext.prototype.uniform1f = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
  * @param {Float32Array|Array<number>} value
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform1fv = function(location, value) {};
+BaseWebGLRenderingContext.prototype.uniform1fv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
  * @param {number|boolean} value
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform1i = function(location, value) {};
+BaseWebGLRenderingContext.prototype.uniform1i = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
  * @param {Int32Array|Array<number>|Array<boolean>} value
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform1iv = function(location, value) {};
+BaseWebGLRenderingContext.prototype.uniform1iv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2686,7 +2692,7 @@ WebGLRenderingContext.prototype.uniform1iv = function(location, value) {};
  * @param {number} value2
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform2f = function(
+BaseWebGLRenderingContext.prototype.uniform2f = function(
     location, value1, value2) {};
 
 /**
@@ -2694,7 +2700,7 @@ WebGLRenderingContext.prototype.uniform2f = function(
  * @param {Float32Array|Array<number>} value
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform2fv = function(location, value) {};
+BaseWebGLRenderingContext.prototype.uniform2fv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2702,7 +2708,7 @@ WebGLRenderingContext.prototype.uniform2fv = function(location, value) {};
  * @param {number|boolean} value2
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform2i = function(
+BaseWebGLRenderingContext.prototype.uniform2i = function(
     location, value1, value2) {};
 
 /**
@@ -2710,7 +2716,7 @@ WebGLRenderingContext.prototype.uniform2i = function(
  * @param {Int32Array|Array<number>|Array<boolean>} value
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform2iv = function(location, value) {};
+BaseWebGLRenderingContext.prototype.uniform2iv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2719,7 +2725,7 @@ WebGLRenderingContext.prototype.uniform2iv = function(location, value) {};
  * @param {number} value3
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform3f = function(
+BaseWebGLRenderingContext.prototype.uniform3f = function(
     location, value1, value2, value3) {};
 
 /**
@@ -2727,7 +2733,7 @@ WebGLRenderingContext.prototype.uniform3f = function(
  * @param {Float32Array|Array<number>} value
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform3fv = function(location, value) {};
+BaseWebGLRenderingContext.prototype.uniform3fv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2736,7 +2742,7 @@ WebGLRenderingContext.prototype.uniform3fv = function(location, value) {};
  * @param {number|boolean} value3
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform3i = function(
+BaseWebGLRenderingContext.prototype.uniform3i = function(
     location, value1, value2, value3) {};
 
 /**
@@ -2744,7 +2750,7 @@ WebGLRenderingContext.prototype.uniform3i = function(
  * @param {Int32Array|Array<number>|Array<boolean>} value
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform3iv = function(location, value) {};
+BaseWebGLRenderingContext.prototype.uniform3iv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2754,7 +2760,7 @@ WebGLRenderingContext.prototype.uniform3iv = function(location, value) {};
  * @param {number} value4
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform4f = function(
+BaseWebGLRenderingContext.prototype.uniform4f = function(
     location, value1, value2, value3, value4) {};
 
 /**
@@ -2762,7 +2768,7 @@ WebGLRenderingContext.prototype.uniform4f = function(
  * @param {Float32Array|Array<number>} value
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform4fv = function(location, value) {};
+BaseWebGLRenderingContext.prototype.uniform4fv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2772,7 +2778,7 @@ WebGLRenderingContext.prototype.uniform4fv = function(location, value) {};
  * @param {number|boolean} value4
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform4i = function(
+BaseWebGLRenderingContext.prototype.uniform4i = function(
     location, value1, value2, value3, value4) {};
 
 /**
@@ -2780,7 +2786,7 @@ WebGLRenderingContext.prototype.uniform4i = function(
  * @param {Int32Array|Array<number>|Array<boolean>} value
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniform4iv = function(location, value) {};
+BaseWebGLRenderingContext.prototype.uniform4iv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2788,7 +2794,7 @@ WebGLRenderingContext.prototype.uniform4iv = function(location, value) {};
  * @param {Float32Array|Array<number>} data
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniformMatrix2fv = function(
+BaseWebGLRenderingContext.prototype.uniformMatrix2fv = function(
     location, transpose, data) {};
 
 /**
@@ -2797,7 +2803,7 @@ WebGLRenderingContext.prototype.uniformMatrix2fv = function(
  * @param {Float32Array|Array<number>} data
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniformMatrix3fv = function(
+BaseWebGLRenderingContext.prototype.uniformMatrix3fv = function(
     location, transpose, data) {};
 
 /**
@@ -2806,34 +2812,34 @@ WebGLRenderingContext.prototype.uniformMatrix3fv = function(
  * @param {Float32Array|Array<number>} data
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.uniformMatrix4fv = function(
+BaseWebGLRenderingContext.prototype.uniformMatrix4fv = function(
     location, transpose, data) {};
 
 /**
  * @param {WebGLProgram} program
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.useProgram = function(program) {};
+BaseWebGLRenderingContext.prototype.useProgram = function(program) {};
 
 /**
  * @param {WebGLProgram} program
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.validateProgram = function(program) {};
+BaseWebGLRenderingContext.prototype.validateProgram = function(program) {};
 
 /**
  * @param {number} indx
  * @param {number} x
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.vertexAttrib1f = function(indx, x) {};
+BaseWebGLRenderingContext.prototype.vertexAttrib1f = function(indx, x) {};
 
 /**
  * @param {number} indx
  * @param {Float32Array|Array<number>|!Iterable<number>} values
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.vertexAttrib1fv = function(indx, values) {};
+BaseWebGLRenderingContext.prototype.vertexAttrib1fv = function(indx, values) {};
 
 /**
  * @param {number} indx
@@ -2841,7 +2847,7 @@ WebGLRenderingContext.prototype.vertexAttrib1fv = function(indx, values) {};
  * @param {number} y
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.vertexAttrib2f = function(
+BaseWebGLRenderingContext.prototype.vertexAttrib2f = function(
     indx, x, y) {};
 
 /**
@@ -2849,7 +2855,7 @@ WebGLRenderingContext.prototype.vertexAttrib2f = function(
  * @param {Float32Array|Array<number>|!Iterable<number>} values
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.vertexAttrib2fv = function(
+BaseWebGLRenderingContext.prototype.vertexAttrib2fv = function(
     indx, values) {};
 
 /**
@@ -2859,7 +2865,7 @@ WebGLRenderingContext.prototype.vertexAttrib2fv = function(
  * @param {number} z
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.vertexAttrib3f = function(
+BaseWebGLRenderingContext.prototype.vertexAttrib3f = function(
     indx, x, y, z) {};
 
 /**
@@ -2867,7 +2873,7 @@ WebGLRenderingContext.prototype.vertexAttrib3f = function(
  * @param {Float32Array|Array<number>|!Iterable<number>} values
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.vertexAttrib3fv = function(indx, values) {};
+BaseWebGLRenderingContext.prototype.vertexAttrib3fv = function(indx, values) {};
 
 /**
  * @param {number} indx
@@ -2877,7 +2883,7 @@ WebGLRenderingContext.prototype.vertexAttrib3fv = function(indx, values) {};
  * @param {number} w
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.vertexAttrib4f = function(
+BaseWebGLRenderingContext.prototype.vertexAttrib4f = function(
     indx, x, y, z, w) {};
 
 /**
@@ -2885,7 +2891,7 @@ WebGLRenderingContext.prototype.vertexAttrib4f = function(
  * @param {Float32Array|Array<number>|!Iterable<number>} values
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.vertexAttrib4fv = function(indx, values) {};
+BaseWebGLRenderingContext.prototype.vertexAttrib4fv = function(indx, values) {};
 
 /**
  * @param {number} indx
@@ -2896,7 +2902,7 @@ WebGLRenderingContext.prototype.vertexAttrib4fv = function(indx, values) {};
  * @param {number} offset
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.vertexAttribPointer = function(
+BaseWebGLRenderingContext.prototype.vertexAttribPointer = function(
     indx, size, type, normalized, stride, offset) {};
 
 /**
@@ -2906,7 +2912,7 @@ WebGLRenderingContext.prototype.vertexAttribPointer = function(
  * @param {number} height
  * @return {undefined}
  */
-WebGLRenderingContext.prototype.viewport = function(x, y, width, height) {};
+BaseWebGLRenderingContext.prototype.viewport = function(x, y, width, height) {};
 
 
 /**
