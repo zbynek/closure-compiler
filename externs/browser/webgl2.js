@@ -1634,7 +1634,6 @@ WebGL2RenderingContext.prototype.MAX_CLIENT_WAIT_TIMEOUT_WEBGL;
  * @param {number=} opt_srcOffset
  * @param {number=} opt_length
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.bufferData = function(
     target, data, usage, opt_srcOffset, opt_length) {};
@@ -1646,7 +1645,6 @@ WebGL2RenderingContext.prototype.bufferData = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_length
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.bufferSubData = function(
     target, offset, data, opt_srcOffset, opt_length) {};
@@ -1788,7 +1786,6 @@ WebGL2RenderingContext.prototype.texStorage3D = function(
  * @param {?ArrayBufferView|?TexImageSource|number=} opt_imgOrOffset
  * @param {number=} opt_srcOffset
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.texImage2D = function(
     target, level, internalformat, formatOrWidth, typeOrHeight, imgOrBorder,
@@ -1806,7 +1803,6 @@ WebGL2RenderingContext.prototype.texImage2D = function(
  * @param {?ArrayBufferView|?TexImageSource|number=} opt_imgOrOffset
  * @param {number=} opt_srcOffset
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.texSubImage2D = function(
     target, level, xoffset, yoffset, formatOrWidth, typeOrHeight, dataOrFormat,
@@ -1875,7 +1871,6 @@ WebGL2RenderingContext.prototype.copyTexSubImage3D = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLengthOverride
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.compressedTexImage2D = function(
     target, level, internalformat, width, height, border, srcDataOrSize,
@@ -1911,7 +1906,6 @@ WebGL2RenderingContext.prototype.compressedTexImage3D = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLengthOverride
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.compressedTexSubImage2D = function(
     target, level, xoffset, yoffset, width, height, format, srcDataOrSize,
@@ -1992,7 +1986,6 @@ WebGL2RenderingContext.prototype.uniform4ui = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLength
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.uniform1fv = function(
     location, data, opt_srcOffset, opt_srcLength) {};
@@ -2003,7 +1996,6 @@ WebGL2RenderingContext.prototype.uniform1fv = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLength
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.uniform2fv = function(
     location, data, opt_srcOffset, opt_srcLength) {};
@@ -2014,7 +2006,6 @@ WebGL2RenderingContext.prototype.uniform2fv = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLength
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.uniform3fv = function(
     location, data, opt_srcOffset, opt_srcLength) {};
@@ -2025,7 +2016,6 @@ WebGL2RenderingContext.prototype.uniform3fv = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLength
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.uniform4fv = function(
     location, data, opt_srcOffset, opt_srcLength) {};
@@ -2036,7 +2026,6 @@ WebGL2RenderingContext.prototype.uniform4fv = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLength
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.uniform1iv = function(
     location, data, opt_srcOffset, opt_srcLength) {};
@@ -2047,7 +2036,6 @@ WebGL2RenderingContext.prototype.uniform1iv = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLength
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.uniform2iv = function(
     location, data, opt_srcOffset, opt_srcLength) {};
@@ -2058,7 +2046,6 @@ WebGL2RenderingContext.prototype.uniform2iv = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLength
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.uniform3iv = function(
     location, data, opt_srcOffset, opt_srcLength) {};
@@ -2069,7 +2056,6 @@ WebGL2RenderingContext.prototype.uniform3iv = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLength
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.uniform4iv = function(
     location, data, opt_srcOffset, opt_srcLength) {};
@@ -2122,7 +2108,6 @@ WebGL2RenderingContext.prototype.uniform4uiv = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLength
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.uniformMatrix2fv = function(
     location, transpose, data, opt_srcOffset, opt_srcLength) {};
@@ -2167,7 +2152,6 @@ WebGL2RenderingContext.prototype.uniformMatrix2x3fv = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLength
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.uniformMatrix3fv = function(
     location, transpose, data, opt_srcOffset, opt_srcLength) {};
@@ -2212,7 +2196,6 @@ WebGL2RenderingContext.prototype.uniformMatrix3x4fv = function(
  * @param {number=} opt_srcOffset
  * @param {number=} opt_srcLength
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.uniformMatrix4fv = function(
     location, transpose, data, opt_srcOffset, opt_srcLength) {};
@@ -2321,7 +2304,6 @@ WebGL2RenderingContext.prototype.drawRangeElements = function(
  * @param {?ArrayBufferView|number} dstDataOrOffset
  * @param {number=} opt_dstOffset
  * @return {undefined}
- * @override
  */
 WebGL2RenderingContext.prototype.readPixels = function(
     x, y, width, height, format, type, dstDataOrOffset, opt_dstOffset) {};

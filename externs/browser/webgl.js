@@ -1970,7 +1970,7 @@ BaseWebGLRenderingContext.prototype.blendFuncSeparate = function(
  * @param {number} usage
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.bufferData = function(target, data, usage) {};
+WebGLRenderingContext.prototype.bufferData = function(target, data, usage) {};
 
 /**
  * @param {number} target
@@ -1978,7 +1978,7 @@ BaseWebGLRenderingContext.prototype.bufferData = function(target, data, usage) {
  * @param {ArrayBufferView|ArrayBuffer} data
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.bufferSubData = function(
+WebGLRenderingContext.prototype.bufferSubData = function(
     target, offset, data) {};
 
 /**
@@ -2041,7 +2041,7 @@ BaseWebGLRenderingContext.prototype.compileShader = function(shader) {};
  * @param {ArrayBufferView} data
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.compressedTexImage2D = function(
+WebGLRenderingContext.prototype.compressedTexImage2D = function(
     target, level, internalformat, width, height, border, data) {};
 
 /**
@@ -2055,7 +2055,7 @@ BaseWebGLRenderingContext.prototype.compressedTexImage2D = function(
  * @param {ArrayBufferView} data
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.compressedTexSubImage2D = function(
+WebGLRenderingContext.prototype.compressedTexSubImage2D = function(
     target, level, xoffset, yoffset, width, height, format, data) {};
 
 /**
@@ -2523,7 +2523,7 @@ BaseWebGLRenderingContext.prototype.polygonOffset = function(factor, units) {};
  * @param {ArrayBufferView} pixels
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.readPixels = function(
+WebGLRenderingContext.prototype.readPixels = function(
     x, y, width, height, format, type, pixels) {};
 
 /**
@@ -2620,7 +2620,7 @@ BaseWebGLRenderingContext.prototype.stencilOpSeparate = function(
  * @param {ArrayBufferView=} opt_pixels
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.texImage2D = function(
+WebGLRenderingContext.prototype.texImage2D = function(
     target, level, internalformat, format, type, img, opt_format, opt_type,
     opt_pixels) {};
 
@@ -2654,7 +2654,7 @@ BaseWebGLRenderingContext.prototype.texParameteri = function(
  * @param {ArrayBufferView=} opt_pixels
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.texSubImage2D = function(
+WebGLRenderingContext.prototype.texSubImage2D = function(
     target, level, xoffset, yoffset, format, type, data, opt_type,
     opt_pixels) {};
 
@@ -2670,7 +2670,7 @@ BaseWebGLRenderingContext.prototype.uniform1f = function(location, value) {};
  * @param {Float32Array|Array<number>} value
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.uniform1fv = function(location, value) {};
+WebGLRenderingContext.prototype.uniform1fv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2684,7 +2684,7 @@ BaseWebGLRenderingContext.prototype.uniform1i = function(location, value) {};
  * @param {Int32Array|Array<number>|Array<boolean>} value
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.uniform1iv = function(location, value) {};
+WebGLRenderingContext.prototype.uniform1iv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2700,7 +2700,7 @@ BaseWebGLRenderingContext.prototype.uniform2f = function(
  * @param {Float32Array|Array<number>} value
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.uniform2fv = function(location, value) {};
+WebGLRenderingContext.prototype.uniform2fv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2716,7 +2716,7 @@ BaseWebGLRenderingContext.prototype.uniform2i = function(
  * @param {Int32Array|Array<number>|Array<boolean>} value
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.uniform2iv = function(location, value) {};
+WebGLRenderingContext.prototype.uniform2iv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2733,7 +2733,7 @@ BaseWebGLRenderingContext.prototype.uniform3f = function(
  * @param {Float32Array|Array<number>} value
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.uniform3fv = function(location, value) {};
+WebGLRenderingContext.prototype.uniform3fv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2750,7 +2750,7 @@ BaseWebGLRenderingContext.prototype.uniform3i = function(
  * @param {Int32Array|Array<number>|Array<boolean>} value
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.uniform3iv = function(location, value) {};
+WebGLRenderingContext.prototype.uniform3iv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2768,7 +2768,7 @@ BaseWebGLRenderingContext.prototype.uniform4f = function(
  * @param {Float32Array|Array<number>} value
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.uniform4fv = function(location, value) {};
+WebGLRenderingContext.prototype.uniform4fv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2786,7 +2786,7 @@ BaseWebGLRenderingContext.prototype.uniform4i = function(
  * @param {Int32Array|Array<number>|Array<boolean>} value
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.uniform4iv = function(location, value) {};
+WebGLRenderingContext.prototype.uniform4iv = function(location, value) {};
 
 /**
  * @param {WebGLUniformLocation} location
@@ -2794,7 +2794,7 @@ BaseWebGLRenderingContext.prototype.uniform4iv = function(location, value) {};
  * @param {Float32Array|Array<number>} data
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.uniformMatrix2fv = function(
+WebGLRenderingContext.prototype.uniformMatrix2fv = function(
     location, transpose, data) {};
 
 /**
@@ -2803,7 +2803,7 @@ BaseWebGLRenderingContext.prototype.uniformMatrix2fv = function(
  * @param {Float32Array|Array<number>} data
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.uniformMatrix3fv = function(
+WebGLRenderingContext.prototype.uniformMatrix3fv = function(
     location, transpose, data) {};
 
 /**
@@ -2812,7 +2812,7 @@ BaseWebGLRenderingContext.prototype.uniformMatrix3fv = function(
  * @param {Float32Array|Array<number>} data
  * @return {undefined}
  */
-BaseWebGLRenderingContext.prototype.uniformMatrix4fv = function(
+WebGLRenderingContext.prototype.uniformMatrix4fv = function(
     location, transpose, data) {};
 
 /**
